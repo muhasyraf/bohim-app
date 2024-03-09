@@ -58,7 +58,7 @@ class ReportController extends Controller
         );
 
         $file = $request->file('photo');
-        $fileName = time() . '_' . $file->getClientOriginalName();
+        $fileName = time() . '_' . $request->violation_id . $request->marine_biota_id . $file->getClientOriginalExtension();
 
         Storage::putFileAs('reports', $file, $fileName);
         Report::create(
@@ -121,7 +121,7 @@ class ReportController extends Controller
 
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $fileName = time() . '_' . $file->getClientOriginalName();
+            $fileName = time() . '_' . $request->violation_id . $request->marine_biota_id . $file->getClientOriginalExtension();
 
             Storage::putFileAs('reports', $file, $fileName);
         } else {
