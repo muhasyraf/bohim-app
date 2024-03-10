@@ -32,6 +32,8 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// TODO: add landing page (about us, contact us, etc) route here
+
 // guest can access this
 Route::resource('articles', ArticleController::class)->only(['index', 'show']);
 Route::resource('reports', ReportController::class)->only(['index', 'show']);

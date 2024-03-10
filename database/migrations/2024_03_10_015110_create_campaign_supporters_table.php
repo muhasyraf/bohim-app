@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('campaign_supporters', function (Blueprint $table) {
+        Schema::create('campaign_supporter', function (Blueprint $table) {
             $table->id();
             $table->foreignId('campaign_id')->constrained()->cascadeOnDelete();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
@@ -20,10 +20,12 @@ return new class extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * TODO: better off using the default naming convention (campaign_user) or keep this but add "as" method in the relationship
+     * 
      */
+
     public function down(): void
     {
-        Schema::dropIfExists('campaign_supporters');
+        Schema::dropIfExists('campaign_supporter');
     }
 };
