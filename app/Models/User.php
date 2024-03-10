@@ -7,6 +7,7 @@ use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -53,7 +54,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Comment::class);
     }
-    
+
     public function campaigns(): HasMany
     {
         return $this->hasMany(Campaign::class);
@@ -62,5 +63,9 @@ class User extends Authenticatable
     public function reports(): HasMany
     {
         return $this->hasMany(Report::class);
+    }
+    public function supports(): BelongsToMany
+    {
+        return $this->belongsToMany(Campaign::class, 'campaign_supporters')->withTimestamps();
     }
 }
