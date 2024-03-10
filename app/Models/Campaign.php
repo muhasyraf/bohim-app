@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Campaign extends Model
 {
@@ -38,5 +39,9 @@ class Campaign extends Model
     public function marine_biota(): BelongsTo
     {
         return $this->belongsTo(MarineBiota::class);
+    }
+    public function supporter(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'campaign_supporters')->withTimestamps();
     }
 }

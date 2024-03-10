@@ -40,7 +40,7 @@ class ArticleController extends Controller
             [
                 'user_id' => 'required|exists:users,id',
                 'slug' => 'required|string|max:255',
-                'thumbnail' => 'required|string',
+                'thumbnail' => 'required',
                 'title' => 'required|string|max:255',
                 'content' => 'required|string',
             ]

@@ -50,7 +50,7 @@ class ReportController extends Controller
                 'marine_biota_id' => 'required|exists:marine_biotas,id',
                 'location' => 'required|string|max:255',
                 'description' => 'required|string|max:255',
-                'photo' => 'required|string',
+                'photo' => 'required',
                 'action_taken' => 'required|string|max:255',
                 'notes' => 'required|string|max:255',
                 'status' => 'required|string|max:255',
