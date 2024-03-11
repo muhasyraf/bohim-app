@@ -1,17 +1,24 @@
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import { Link } from '@inertiajs/react';
+import ApplicationLogo from "@/Components/ApplicationLogo";
+import { Link } from "@inertiajs/react";
 
 export default function Guest({ children }) {
     return (
-        <div className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <Link href="/">
-                    <ApplicationLogo className="w-20 h-20 fill-current text-gray-500" />
-                </Link>
-            </div>
-
-            <div className="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {children}
+        <div className="min-h-screen flex items-center guest-background md:bg-white">
+            <div className="flex-1 mx-auto">
+                <div className="max-md:px-4 md:flex md:flex-row">
+                    <div className="h-auto md:w-1/2 hidden md:block">
+                        <img
+                            className="object-cover w-full h-screen"
+                            src="https://images.unsplash.com/photo-1624281450963-e33ac96170be?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="img"
+                        />
+                    </div>
+                    <div className="flex items-center justify-center px-3 py-6 sm:py-12 md:w-1/2 auth-card max-h-screen">
+                        <div className="w-full sm:max-w-md p-2 overflow-hidden">
+                            {children}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
