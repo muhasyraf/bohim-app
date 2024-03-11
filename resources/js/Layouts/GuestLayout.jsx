@@ -4,8 +4,8 @@ import { Link } from "@inertiajs/react";
 export default function Guest({ children }) {
     return (
         <div className="min-h-screen flex items-center guest-background md:bg-white">
-            <div className="flex-1 h-full mx-auto">
-                <div className="max-md:p-2 md:flex md:flex-row">
+            <div className="flex-1 mx-auto">
+                <div className="max-md:px-4 md:flex md:flex-row">
                     <div class="h-auto md:w-1/2 hidden md:block">
                         <img
                             class="object-cover w-full h-screen"
@@ -13,8 +13,8 @@ export default function Guest({ children }) {
                             alt="img"
                         />
                     </div>
-                    <div className="flex items-center justify-center px-3 py-6 sm:p-12 md:w-1/2 auth-card">
-                        <div className="w-full sm:max-w-md sm:mt-6 px-6 sm:py-4 overflow-hidden">
+                    <div className="flex items-center justify-center px-3 py-6 sm:py-12 md:w-1/2 auth-card max-h-screen">
+                        <div className="w-full sm:max-w-md p-2 overflow-hidden">
                             {children}
                         </div>
                     </div>
