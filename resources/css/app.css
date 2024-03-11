@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* apply background for screen mobile and tablet screen */
+@media (max-width: 768px) {
+    .guest-background {
+        background: url("https://images.unsplash.com/photo-1624281450963-e33ac96170be?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+            no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .auth-card {
+        @apply rounded-md shadow-md bg-[#ffffffa2] backdrop-blur-md;
+    }
+}
