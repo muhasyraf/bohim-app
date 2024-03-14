@@ -35,9 +35,6 @@ Route::get('/dashboard', function () {
 Route::get('/about', function () {
     return Inertia::render('AboutUs');
 })->name('about');
-Route::get('/contact', function () {
-    return Inertia::render('Contact');
-})->name('contact');
 
 // guest can access this
 Route::resource('articles', ArticleController::class)->only(['index', 'show']);
