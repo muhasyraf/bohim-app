@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+.close-menu,
+.open-menu {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+.hamburger .line {
+    width: 26px;
+    height: 2px;
+    background-color: #000000;
+    display: block;
+    margin: 6px auto;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.menu {
+    font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #fdfafa;
+        color: #000000;
+        transition: all 0.3s ease-in-out;
+        font-size: 28px;
+        padding-top: 40px;
+    }
+
+    .close-menu,
+    .open-menu {
+        display: block;
+    }
+
+    #check:checked ~ .menu {
+        right: 0;
+    }
+}
