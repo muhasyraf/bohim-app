@@ -37,18 +37,44 @@ Route::get('/about', function () {
 })->name('about');
 
 // guest can access this
-Route::resource('articles', ArticleController::class)->only(['index', 'show']);
-Route::resource('reports', ReportController::class)->only(['index', 'show']);
-Route::resource('campaigns', CampaignController::class)->only(['index', 'show']);
+Route::resource('articles', ArticleController::class)->only(['index', 'show'])->names([
+    'index' => 'articles.index',
+    'show' => 'articles.show',
+]);
+Route::resource('reports', ReportController::class)->names([
+    'index' => 'reports.index',
+    'show' => 'reports.show',
+    'create' => 'reports.create',
+    'store' => 'reports.store',
+    'edit' => 'reports.edit',
+    'update' => 'reports.update',
+    'destroy' => 'reports.destroy',
+]);
+Route::resource('campaigns', CampaignController::class)->only(['index', 'show'])->names([
+    'index' => 'campaigns.index',
+    'show' => 'campaigns.show',
+]);
 
 // user need to be authenticated to access this
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::resource('articles', ArticleController::class)->except(['index', 'show']);
-    Route::resource('reports', ReportController::class)->except(['index', 'show']);
-    Route::resource('campaigns', CampaignController::class)->except(['index', 'show']);
+    Route::resource('articles', ArticleController::class)->only(['create', 'store', 'edit', 'update', 'destroy'])->names([
+        'create' => 'articles.create',
+        'store' => 'articles.store',
+        'edit' => 'articles.edit',
+        'update' => 'articles.update',
+        'destroy' => 'articles.destroy',
+
+    ]);
+    Route::resource('campaigns', CampaignController::class)->only(['create', 'store', 'edit', 'update', 'destroy'])->names([
+        'create' => 'campaigns.create',
+        'store' => 'campaigns.store',
+        'edit' => 'campaigns.edit',
+        'update' => 'campaigns.update',
+        'destroy' => 'campaigns.destroy',
+    ]);
 });
 
 require __DIR__ . '/auth.php';

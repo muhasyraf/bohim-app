@@ -11,6 +11,10 @@ use App\Models\MarineBiota;
 
 class ReportController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->only(['create', 'store', 'edit', 'update', 'destroy']);
+    }
     /**
      * Display a listing of the existing report
      */
@@ -28,13 +32,13 @@ class ReportController extends Controller
     public function create()
     {
         $userId = auth()->user()->id;
-        $violationId = Violation::all('id', 'name');
-        $marineBiotaId = MarineBiota::all('id', 'name');
+        $violations = Violation::all('id', 'name');
+        $marineBiotas = MarineBiota::all('id', 'name');
 
         return Inertia::render('Report/Create', [
             'userId' => $userId,
-            'violationId' => $violationId,
-            'marineBiotaId' => $marineBiotaId
+            'violations' => $violations,
+            'marineBiotas' => $marineBiotas
         ]);
     }
 
@@ -49,14 +53,14 @@ class ReportController extends Controller
                 'violation_id' => 'required|exists:violations,id',
                 'marine_biota_id' => 'required|exists:marine_biotas,id',
                 'location' => 'required|string|max:255',
-                'description' => 'required|string|max:255',
+                'description' => 'string|max:255',
                 'photo' => 'required',
                 'action_taken' => 'required|string|max:255',
                 'notes' => 'required|string|max:255',
-                'status' => 'required|string|max:255',
             ]
         );
 
+        $status = 'pending';
         $file = $request->file('photo');
         $fileName = time() . '_' . $request->violation_id . $request->marine_biota_id . $file->getClientOriginalExtension();
 
@@ -71,7 +75,7 @@ class ReportController extends Controller
                 'photo' => $fileName,
                 'action_taken' => $request->action_taken,
                 'notes' => $request->notes,
-                'status' => $request->status,
+                'status' => $status,
             ]
         );
 
