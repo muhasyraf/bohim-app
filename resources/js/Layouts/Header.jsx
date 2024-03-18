@@ -12,19 +12,19 @@ export function Header({}) {
                     </a>
                     <input type="checkbox" id="check" />
                     <span className="menu flex [&>li>a]:text-center [&>li>a]:relative [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:ease-in-out [&>li>a]:text-lg md:mt-0">
-                        <li className="font-bold mt-3 max-w-max md:mt-0 md:ps-6 md:font-normal">
+                        <li className="font-bold mt-3 max-w-max md:mt-1 md:ps-6">
                             <a href="#">Home</a>
                         </li>
-                        <li className="mt-3 max-w-max md:mt-0 md:ps-6">
+                        <li className="mt-3 max-w-max md:mt-1 md:ps-6">
                             <a href="#">About Us</a>
                         </li>
-                        <li className="mt-3 max-w-max md:mt-0 md:ps-6">
+                        <li className="mt-3 max-w-max md:mt-1 md:ps-6">
                             <a href="#">Articles</a>
                         </li>
-                        <li className="mt-3 max-w-max md:mt-0 md:ps-6">
+                        <li className="mt-3 max-w-max md:mt-1 md:ps-6">
                             <a href="#">Report</a>
                         </li>
-                        <li className="mt-3 max-w-max md:mt-0 md:ps-6">
+                        <li className="mt-3 max-w-max md:mt-1 md:ps-6">
                             <a href="#">Contact</a>
                         </li>
                         <li className="w-3/4 px-4 mt-5 md:hidden">
