@@ -1,6 +1,6 @@
 import ApplicationLogo from "@/Components/ApplicationLogo";
 
-export default function Footer() {
+export function Footer() {
     return (
         <footer className="max-w-screen-2xl mx-auto">
             <div className="container-2xl flex flex-col justify-center items-center md:flex-row md:justify-evenly md:items-start md:mx-6 lg:mx-0">

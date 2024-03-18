@@ -1,5 +1,5 @@
-import { Footer } from "@/Layouts/Footer";
 import { Header } from "@/Layouts/Header";
+import { Footer } from "@/Layouts/Footer";
 
 export default function Home() {
     return (
