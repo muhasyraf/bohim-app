@@ -1,4 +1,4 @@
-import '../../css/header.css';
+import "../../css/header.css";
 import PrimaryButton from "@/Components/PrimaryButton";
 import { HamburgerButton } from "@/Components/Header/HamburgerButton";
 
@@ -8,24 +8,37 @@ export function Header({}) {
             <nav className="bg-white fixed w-full z-20 top-0 left-0 md:pb-0.5">
                 <ul className="navigation max-w-screen-2xl flex flex-wrap justify-between items-center relative mx-auto py-3 px-5 md:font-light">
                     <a className="logo" href="#">
-                        <img src="/assets/img/logo/logo-header.png" alt="header-logo"/>
+                        <img
+                            src="/assets/img/logo/logo-header.png"
+                            alt="header-logo"
+                        />
                     </a>
                     <input type="checkbox" id="check" />
                     <div className="menu flex md:mt-0">
                         <li className="font-bold mt-3 max-w-max md:mt-1 md:ps-6 md:font-normal">
-                            <a href="#" className="text-base">Home</a>
+                            <a href="#" className="text-base">
+                                Home
+                            </a>
                         </li>
                         <li className="mt-3 max-w-max md:mt-1 md:ps-6">
-                            <a href="#" className="text-base">About Us</a>
+                            <a href="#" className="text-base">
+                                About Us
+                            </a>
                         </li>
                         <li className="mt-3 max-w-max md:mt-1 md:ps-6">
-                            <a href="#" className="text-base">Articles</a>
+                            <a href="#" className="text-base">
+                                Articles
+                            </a>
                         </li>
                         <li className="mt-3 max-w-max md:mt-1 md:ps-6">
-                            <a href="#" className="text-base">Report</a>
+                            <a href="#" className="text-base">
+                                Report
+                            </a>
                         </li>
                         <li className="mt-3 max-w-max md:mt-1 md:ps-6 md:pe-6">
-                            <a href="#" className="text-base">Contact</a>
+                            <a href="#" className="text-base">
+                                Contact
+                            </a>
                         </li>
                         <li className="w-3/4 px-4 mt-5 md:mt-0.5 md:px-0 md:max-w-max">
                             <a href="/login">
