@@ -1,10 +1,14 @@
-import { Head } from "@inertiajs/react";
+import { Header } from "@/Layouts/Header";
+import { Footer } from "@/Layouts/Footer";
 
 export default function Home() {
     return (
-        <div>
-            <Head title="Home" />
-            <h1>Home</h1>
-        </div>
+        <>
+            <Header />
+            <div className="container h-screen mt-20">
+                <h1 className="">This is Content</h1>
+            </div>
+           <Footer />
+        </>
     );
 }

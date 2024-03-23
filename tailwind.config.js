@@ -26,6 +26,7 @@ export default {
             colors: {
                 "bohim-blue": "#007EA7",
                 "bohim-sky": "#55C4CA",
+                "bohim-snow": "#FDFAFA",
             },
         },
     },
