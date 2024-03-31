@@ -5,11 +5,12 @@
     display: none;
 }
 
+/* slider button height adjustment */
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-    top: var(--swiper-pagination-top, 90%);
+    top: var(--swiper-pagination-top, 92%);
 }
 
 @media only screen and (min-width: 640px) {
@@ -26,7 +27,15 @@
     .swiper-pagination-custom,
     .swiper-horizontal > .swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal {
-        top: var(--swiper-pagination-top, 92%) !important;
+        top: var(--swiper-pagination-top, 85%) !important;
+    }
+
+    /* slider button left alignment adjustment for medium screen*/
+    .swiper-horizontal
+        > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+    .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+        left: 0;
+        transform: none;
     }
 }
 
