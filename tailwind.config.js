@@ -1,5 +1,6 @@
 import forms from "@tailwindcss/forms";
 import defaultTheme from "tailwindcss/defaultTheme";
+const plugin = require('tailwindcss/plugin')
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -27,9 +28,27 @@ export default {
                 "bohim-blue": "#007EA7",
                 "bohim-sky": "#55C4CA",
                 "bohim-snow": "#FDFAFA",
+                "bohim-jet": "#2D2E2E",
+            },
+            textShadow: {
+                sm: '0 1px 2px var(--tw-shadow-color)',
+                DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+                lg: '0 8px 16px var(--tw-shadow-color)',
             },
         },
     },
 
-    plugins: [forms, require("tailwindcss-animate")],
+    plugins: [
+        forms, require("tailwindcss-animate"),
+        plugin(function ({ matchUtilities, theme }) {
+            matchUtilities(
+                {
+                    'text-shadow': (value) => ({
+                        textShadow: value,
+                    }),
+                },
+                { values: theme('textShadow') }
+            )
+        }),
+    ],
 };
