@@ -1,0 +1,47 @@
+/* Swiper Button Styling */
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+}
+
+/* slider button height adjustment */
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: var(--swiper-pagination-top, 92%);
+}
+
+@media only screen and (min-width: 640px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
+        top: var(--swiper-navigation-top-offset, 50%);
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        top: var(--swiper-pagination-top, 85%) !important;
+    }
+
+    /* slider button left alignment adjustment for medium screen*/
+    .swiper-horizontal
+        > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+    .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+        left: 0;
+        transform: none;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+}
