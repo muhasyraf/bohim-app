@@ -30,6 +30,7 @@ export default {
                 "bohim-snow": "#FDFAFA",
                 "bohim-jet": "#2D2E2E",
                 "bohim-light-blue": "#E7F3F3",
+                "bohim-cream-white": "#F6FFFF",
             },
             textShadow: {
                 sm: '0 1px 2px var(--tw-shadow-color)',

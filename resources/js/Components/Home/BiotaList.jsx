@@ -19,8 +19,8 @@ export default function BiotaList() {
                     >
                         <a href="#">
                             <img
-                                className="rounded-t-lg mx-auto"
-                                src="/assets/img/biotas/arwana-red.png"
+                                className="rounded-lg mx-auto"
+                                src={biota.photo}
                                 alt=""
                             />
                             <div className="absolute bottom-6 drop-shadow-xl ps-4 w-3/4">
