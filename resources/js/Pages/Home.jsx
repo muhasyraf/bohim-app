@@ -2,14 +2,16 @@ import { Header } from "@/Layouts/Header";
 import { Footer } from "@/Layouts/Footer";
 import { HeroSlider } from "@/Components/Home/HeroSlider";
 import BiotaList from "@/Components/Home/BiotaList";
+import Features from "@/Components/Home/Features";
 
 export default function Home() {
     return (
         <>
             <Header />
             {/* Hero Section */}
-            <div className="mt-14 mb-16">
+            <div className="mt-12 mb-16">
                 <HeroSlider />
+                <Features />
                 <BiotaList />
             </div>
             <Footer />
