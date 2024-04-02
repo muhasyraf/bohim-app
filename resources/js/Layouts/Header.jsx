@@ -102,12 +102,11 @@ export default function Header({ user }) {
                                 </Dropdown>
                             </div>
                         ) : (
-                            <PrimaryButton
-                                href={route("login")}
-                                className="text-sm"
-                            >
-                                Login
-                            </PrimaryButton>
+                            <Link href={route("login")}>
+                                <PrimaryButton className="text-sm">
+                                    Login
+                                </PrimaryButton>
+                            </Link>
                         )}
                     </li>
                     <label htmlFor="check" className="close-menu">
