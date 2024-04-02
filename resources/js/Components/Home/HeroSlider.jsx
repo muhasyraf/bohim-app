@@ -11,7 +11,7 @@ import "../../../css/slider.css";
 
 export function HeroSlider() {
     return (
-        <Swiper
+        <Swiper className="container"
             // install Swiper modules
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={300}
@@ -25,7 +25,7 @@ export function HeroSlider() {
                 "--swiper-pagination-bullet-horizontal-gap": "6px",
             }}
         >
-            <SwiperSlide className="">
+            <SwiperSlide>
                 <div
                     className="relative w-full h-1/2 sm:h-max flex items-center justify-center md:justify-start text-center bg-cover bg-center max-w-screen-2xl lg:mx-auto"
                     style={{

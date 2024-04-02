@@ -2,7 +2,7 @@ import { biotas } from "../../../../public/data/biota";
 
 export default function BiotaList() {
     return (
-        <div className="relative mt-24 mb-10">
+        <div className="container relative mt-24 mb-10">
             <div className="text-center mb-20">
                 <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-bohim-jet tracking-wide">
                     Biota Nusantara
