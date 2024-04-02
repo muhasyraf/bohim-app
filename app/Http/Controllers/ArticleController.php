@@ -5,10 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Article;
+use App\Models\User;
 use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->only(['create', 'store', 'edit', 'update', 'destroy']);
+    }
     /**
      * Display a listing of the article.
      */
@@ -49,7 +54,7 @@ class ArticleController extends Controller
         $file = $request->file('thumbnail');
         $fileName = time() . '_' . $request->title . $file->getClientOriginalExtension();
 
-        Storage::putFileAs('articles', $file, $fileName);
+        Storage::putFileAs('public/articles', $file, $fileName);
         Article::create([
             'user_id' => $request->user_id,
             'slug' => $request->slug,
@@ -67,8 +72,10 @@ class ArticleController extends Controller
     public function show(string $id)
     {
         $article = Article::find($id);
+        $user = User::find($article->user_id);
         return Inertia::render('Article/Show', [
-            'article' => $article
+            'article' => $article,
+            'user' => $user
         ]);
     }
 
@@ -102,7 +109,7 @@ class ArticleController extends Controller
         if ($request->hasFile('thumbnail')) {
             $file = $request->file('thumbnail');
             $fileName = time() . '_' . $request->title . $file->getClientOriginalExtension();
-            Storage::putFileAs('articles', $file, $fileName);
+            Storage::putFileAs('public/articles', $file, $fileName);
             $article->thumbnail = $fileName;
         }
         $article->update($request->all());

@@ -1,8 +1,9 @@
 import ApplicationLogo from "@/Components/ApplicationLogo";
+import { Link } from "@inertiajs/react";
 
-export function Footer() {
+export default function Footer() {
     return (
-        <footer className="max-w-screen-2xl mx-auto">
+        <footer className="bg-bohim-snow max-w-screen-2xl mx-auto">
             <div className="container-2xl flex flex-col justify-center items-center md:flex-row md:justify-evenly md:items-start md:mx-6 lg:mx-0">
                 <div className="logo">
                     <ApplicationLogo />
@@ -50,19 +51,20 @@ export function Footer() {
                         </h3>
                         <ul className="flex flex-wrap justify-evenly gap-3 px-4 mt-5 min-[410px]:flex-col min-[410px]:gap-1 min-[410px]:mt-3 min-[410px]:ps-0">
                             <li className="text-sm text-slate-500">
-                                <a href="#">Home</a>
+                                <Link href={route("home")}>Home</Link>
                             </li>
                             <li className="text-sm text-slate-500">
-                                <a href="#">About Us</a>
+                                <Link href={route("about")}>About Us</Link>
                             </li>
                             <li className="text-sm text-slate-500">
-                                <a href="#">Articles</a>
+                                <Link href={route("articles.index")}>
+                                    Articles
+                                </Link>
                             </li>
                             <li className="text-sm text-slate-500">
-                                <a href="#">Report</a>
-                            </li>
-                            <li className="text-sm text-slate-500">
-                                <a href="#">Contact</a>
+                                <Link href={route("reports.index")}>
+                                    Report
+                                </Link>
                             </li>
                         </ul>
                     </div>

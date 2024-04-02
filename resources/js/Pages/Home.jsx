@@ -4,10 +4,10 @@ import { HeroSlider } from "@/Components/Home/HeroSlider";
 import BiotaList from "@/Components/Home/BiotaList";
 import Features from "@/Components/Home/Features";
 
-export default function Home() {
+export default function Home({ auth }) {
     return (
         <>
-            <Header />
+            <Header user={auth.user} />
             {/* Hero Section */}
             <div className="mt-12 mb-16">
                 <HeroSlider />
