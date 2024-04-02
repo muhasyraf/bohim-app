@@ -42,9 +42,14 @@ Route::get('/about', function () {
 })->name('about');
 
 // guest can access this
-Route::resource('articles', ArticleController::class)->only(['index', 'show'])->names([
+Route::resource('articles', ArticleController::class)->names([
     'index' => 'articles.index',
     'show' => 'articles.show',
+    'create' => 'articles.create',
+    'store' => 'articles.store',
+    'edit' => 'articles.edit',
+    'update' => 'articles.update',
+    'destroy' => 'articles.destroy',
 ]);
 Route::resource('reports', ReportController::class)->names([
     'index' => 'reports.index',
@@ -65,14 +70,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::resource('articles', ArticleController::class)->only(['create', 'store', 'edit', 'update', 'destroy'])->names([
-        'create' => 'articles.create',
-        'store' => 'articles.store',
-        'edit' => 'articles.edit',
-        'update' => 'articles.update',
-        'destroy' => 'articles.destroy',
-
-    ]);
     Route::resource('campaigns', CampaignController::class)->only(['create', 'store', 'edit', 'update', 'destroy'])->names([
         'create' => 'campaigns.create',
         'store' => 'campaigns.store',
