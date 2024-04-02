@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../../css/slider.css";
 
-export function HeroSlider() {
+export default function HeroSlider() {
     return (
         <Swiper className="container"
             // install Swiper modules

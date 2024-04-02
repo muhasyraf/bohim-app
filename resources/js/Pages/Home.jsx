@@ -1,6 +1,6 @@
-import { Header } from "@/Layouts/Header";
-import { Footer } from "@/Layouts/Footer";
-import { HeroSlider } from "@/Components/Home/HeroSlider";
+import Header from "@/Layouts/Header";
+import Footer from "@/Layouts/Footer";
+import HeroSlider from "@/Components/Home/HeroSlider";
 import BiotaList from "@/Components/Home/BiotaList";
 import Features from "@/Components/Home/Features";
 
