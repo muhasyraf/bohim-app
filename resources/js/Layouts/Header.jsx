@@ -4,16 +4,14 @@ import { HamburgerButton } from "@/Components/Header/HamburgerButton";
 import { Link } from "@inertiajs/react";
 import Dropdown from "@/Components/Dropdown";
 import NavLink from "@/Components/NavLink";
+import ApplicationLogo from "@/Components/ApplicationLogo";
 
 export default function Header({ user }) {
     return (
         <nav className="bg-bohim-snow fixed w-full z-20 top-0 left-0 md:pb-0.5">
             <ul className="navigation max-w-screen-2xl flex flex-wrap justify-between items-center relative mx-auto py-3 px-5 md:font-light">
                 <Link className="logo" href="#">
-                    <img
-                        src="/assets/img/logo/logo-header.png"
-                        alt="header-logo"
-                    />
+                    <ApplicationLogo width={65} />
                 </Link>
                 <input type="checkbox" id="check" />
                 <div className="menu flex md:mt-0">

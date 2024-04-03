@@ -1,7 +1,7 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head, usePage, Link, useForm } from "@inertiajs/react";
 
-export default function Show({ auth, article, user }) {
+export default function Show({ auth, article }) {
     return (
         <AuthenticatedLayout user={auth.user}>
             <Head title={article.title} />
@@ -10,11 +10,11 @@ export default function Show({ auth, article, user }) {
                 <div className="px-4 py-6 sm:px-0 flex items-start gap-8">
                     <div className="flex items-center pt-4">
                         <div className="ml-2 flex flex-col items-center gap-2">
-                            {user.profile_photo_url ? (
+                            {article.user.profile_photo_url ? (
                                 <img
                                     className="h-12 w-12 rounded-full"
-                                    src={user.profile_photo_url}
-                                    alt={user.name}
+                                    src={article.user.profile_photo_url}
+                                    alt={article.user.name}
                                 />
                             ) : (
                                 <svg
@@ -27,7 +27,18 @@ export default function Show({ auth, article, user }) {
                                 </svg>
                             )}
                             <div className="text-base font-medium text-gray-900">
-                                {user.name}
+                                {article.user.name}
+                            </div>
+                            {/* create badge categories below */}
+                            <div className="text-sm text-gray-500 flex gap-1">
+                                {article.categories.map((category) => (
+                                    <span
+                                        key={category.id}
+                                        className="px-2 py-1 bg-gray-200 text-gray-800 rounded-full"
+                                    >
+                                        {category.name}
+                                    </span>
+                                ))}
                             </div>
                             <div className="text-sm text-gray-500">
                                 Created at: {article.created_at}
@@ -41,10 +52,16 @@ export default function Show({ auth, article, user }) {
                         <h1 className="text-5xl font-semibold text-gray-900">
                             {article.title}
                         </h1>
-                        <div className="mt-4">
-                            <p className="text-lg leading-7 text-gray-500">
-                                {article.content}
-                            </p>
+                        <div className="mt-4 flex flex-col gap-2">
+                            {/* divide every line spacing with new paragraph */}
+                            {article.content.split("\n").map((line, index) => (
+                                <p
+                                    key={index}
+                                    className="text-lg text-gray-700"
+                                >
+                                    {line}
+                                </p>
+                            ))}
                         </div>
                     </div>
                 </div>

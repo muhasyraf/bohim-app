@@ -19,7 +19,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::with('categories', 'user')->get();
         return Inertia::render('Article/Index', [
             'articles' => $articles
         ]);
@@ -71,11 +71,10 @@ class ArticleController extends Controller
      */
     public function show(string $id)
     {
-        $article = Article::find($id);
+        $article = Article::with('categories', 'user')->find($id);
         $user = User::find($article->user_id);
         return Inertia::render('Article/Show', [
-            'article' => $article,
-            'user' => $user
+            'article' => $article
         ]);
     }
 
