@@ -1,20 +1,26 @@
-import { biotas } from "../../../../public/data/biota";
+import { biotaFish } from "../../../../public/data/biota-fish";
+import { biotaNonFish } from "../../../../public/data/biota-non-fish";
 
 export default function BiotaList() {
     return (
-        <div className="container relative mt-24 mb-10">
-            <div className="text-center mb-20">
-                <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-bohim-jet tracking-wide">
+        <div className="container relative mt-32">
+            <div className="text-center mb-10 xl:mb-16">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-bohim-jet tracking-wide">
                     Biota Nusantara
-                </span>
+                </h2>
+                <h3 className="text-md mt-6 sm:text-xl md:text-2xl font-medium text-bohim-jet tracking-wide mx-4">
+                    Yuk, kenalin teman-teman kita si penguasa laut Nusantara
+                    yang dilindungi Negara
+                </h3>
             </div>
-            <div className="container-xl lg:mx-10 mb-12 grid grid-cols-1 grid-cols-subgrid min-[520px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                {biotas.map((biota, index) => (
+            {/* auto cols is for horizontal slider in mobile resolution */}
+            <div className="grid auto-cols-max grid-flow-col overflow-x-auto gap-x-4 xl:grid-cols-5">
+                {biotaFish.map((biota, index) => (
                     <div
                         key={index}
-                        // className={"relative max-w-52 bg-white rounded-lg mx-auto " + (index % 2 != 0 ? 'lg:pt-8' : '')}
                         className={
-                            "relative max-w-52 bg-white rounded-lg mx-auto pt-8"
+                            "relative max-w-52 bg-white rounded-lg mx-auto mt-8 " +
+                            (index % 2 != 0 ? "xl:pt-8" : "")
                         }
                     >
                         <a href="#">
@@ -23,8 +29,43 @@ export default function BiotaList() {
                                 src={biota.photo}
                                 alt=""
                             />
-                            <div className="absolute bottom-6 drop-shadow-xl ps-4 w-3/4">
-                                <h5 className="text-xl font-extrabold tracking-tight text-white leading-6 text-shadow-sm shadow-stone-300">
+                            <div
+                                className={
+                                    "absolute drop-shadow-xl ps-4 w-3/4 bottom-5 " +
+                                    (index % 2 == 0 ? "xl:bottom-11" : "")
+                                }
+                            >
+                                <h5 className="text-xl font-extrabold tracking-wide text-white leading-6 text-shadow-lg shadow-stone-300">
+                                    {biota.name}
+                                </h5>
+                            </div>
+                        </a>
+                    </div>
+                ))}
+            </div>
+            {/* auto cols is for horizontal slider in mobile resolution */}
+            <div className="mt-2 sm:mt-4 mb-12 grid auto-cols-max grid-flow-col overflow-x-auto gap-x-4 xl:grid-cols-5">
+                {biotaNonFish.map((biota, index) => (
+                    <div
+                        key={index}
+                        className={
+                            "relative max-w-52 bg-white rounded-lg mx-auto mt-8 " +
+                            (index % 2 != 0 ? "xl:pt-8" : "")
+                        }
+                    >
+                        <a href="#">
+                            <img
+                                className="rounded-lg mx-auto"
+                                src={biota.photo}
+                                alt=""
+                            />
+                            <div
+                                className={
+                                    "absolute drop-shadow-xl ps-4 w-3/4 bottom-5 " +
+                                    (index % 2 == 0 ? "xl:bottom-11" : "")
+                                }
+                            >
+                                <h5 className="text-xl font-extrabold tracking-wide text-white leading-6 text-shadow-lg shadow-stone-400">
                                     {biota.name}
                                 </h5>
                             </div>

@@ -28,10 +28,10 @@ export default function Features() {
                                 </svg>
                             </div>
                             <h1 className="text-white -mt-16 mb-2 text-2xl font-bold lg:px-14">
-                                Learn
+                                Protect Now!
                             </h1>
                             <p className="text-white px-4">
-                                Jelajahi informasi dan pengetahuan tentang keanekaragaman hayati laut.
+                                Pelajari jenis-jenis biota laut yang dilindungi di Indonesia.
                             </p>
                         </div>
                         <div className="rounded-xl bg-bohim-sky p-6 text-center shadow-xl">
@@ -53,7 +53,7 @@ export default function Features() {
                                 Report
                             </h1>
                             <p className="text-white px-4">
-                                Jelajahi informasi dan pengetahuan tentang keanekaragaman hayati laut.
+                                Laporkan temuan aktivitas ilegal terhadap biota laut yang dilindungi
                             </p>
                         </div>
                         <div className="rounded-xl bg-bohim-sky p-6 text-center shadow-xl">
@@ -75,7 +75,7 @@ export default function Features() {
                                 Article
                             </h1>
                             <p className="text-white px-4">
-                                Jelajahi informasi dan pengetahuan tentang keanekaragaman hayati laut.
+                                Telusuri artikel dan berita terkait biota laut yang dilindungi.
                             </p>
                         </div>
                         {/* Campaign */}

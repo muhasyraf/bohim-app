@@ -1,4 +1,4 @@
-export const biotas = [
+export const biotaFish = [
     {
         name: "Arwana Irian",
         scientific_name: "Scleropages jardinii",
@@ -14,14 +14,6 @@ export const biotas = [
             "Ikan air tawar berwarna merah cerah dengan sisik besar dan ekor panjang.",
         status: "Rentan",
         photo: "/assets/img/biotas/arwana-red.png",
-    },
-    {
-        name: "Bambu Laut",
-        scientific_name: "Isis hippuris spp.",
-        description:
-            "Tumbuhan laut yang memiliki daun berbentuk pita dan sering tumbuh di perairan dangkal dekat pantai.",
-        status: "Rentan",
-        photo: "/assets/img/biotas/bambu-laut.jpg",
     },
     {
         name: "Banggai Cardinal Fish",
@@ -46,36 +38,5 @@ export const biotas = [
             "Mamalia laut yang memiliki tubuh seperti ikan paus, hidup di perairan dangkal dan memakan rumput laut.",
         status: "Rentan",
         photo: "/assets/img/biotas/dugong.jpg",
-    },
-    {
-        name: "Hiu Gergaji",
-        scientific_name: "Pristiophorus cirratus",
-        description:
-            "Hiu dengan moncong yang memanjang dan mirip gergaji, hidup di kedalaman laut yang dalam.",
-        status: "Rentan",
-        photo: "/assets/img/biotas/hiu-gergaji.jpg",
-    },
-    {
-        name: "Hiu Koboi",
-        scientific_name: "Carcharhinus amblyrhynchos",
-        description:
-            "Hiu dengan ukuran sedang dan sering ditemukan di perairan terumbu karang.",
-        status: "Rentan",
-        photo: "/assets/img/biotas/hiu-koboi.png",
-    },
-    {
-        name: "Hiu Martil",
-        scientific_name: "Sphyrna mokarran",
-        description:
-            "Hiu dengan kepala yang datar dan bentuk seperti martil, biasanya hidup di perairan tropis.",
-        status: "Rentan",
-        photo: "/assets/img/biotas/hiu-martil.jpg",
-    },
-    {
-        name: "Hiu Paus",
-        scientific_name: "Rhincodon typus",
-        description: "Hiu terbesar yang memakan plankton, memiliki tubuh besar dan mulut yang lebar.",
-        status: "Rentan",
-        photo: "/assets/img/biotas/hiu-paus.jpg"
     }
 ];
