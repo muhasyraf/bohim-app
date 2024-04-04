@@ -5,8 +5,9 @@ export default function SearchBar() {
     return (
         <div className="flex items-center gap-2">
             <TextInput
-                className="w-full bg-[#E7F3F3] border-none py-4 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-bohim-sky focus:ring-opacity-50"
+                className="w-full bg-[#E7F3F3] border-none py-4 px-6 focus:outline-none focus:ring-2 focus:ring-bohim-sky focus:ring-opacity-50"
                 placeholder="Search article..."
+                rounded="rounded-full"
             />
             <Dropdown>
                 <Dropdown.Trigger>
