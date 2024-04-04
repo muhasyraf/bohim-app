@@ -48,11 +48,12 @@ export default function HeroSlider() {
                                 laporkan ancamannya. Mari kita jaga laut bersama
                                 untuk masa depan yang lestari.
                             </h3>
+                            {/* Todo: make this button as separate component be reused */}
                             <div className="mt-5 sm:mt-8 sm:flex justify-center md:justify-start pb-24 sm:pb-32 md:pb-48">
                                 <div className="shadow">
                                     <a
                                         href="#"
-                                        className="w-9/12 sm:w-full flex items-center justify-center p-1 sm:px-8 py-3 rounded-full border border-transparent text-base leading-6 font-regular text-white mx-auto bg-bohim-sky hover:bg-bohim-blue focus:outline-none focus:border-white focus:shadow-outline-white transition duration-150 ease-in-out md:py-4 md:px-10"
+                                        className="w-9/12 sm:w-full flex items-center justify-center p-1 sm:px-8 py-3 rounded-full border border-transparent text-base leading-6 font-bold text-white mx-auto bg-bohim-sky hover:bg-bohim-blue focus:outline-none focus:border-white focus:shadow-outline-white transition duration-150 ease-in-out md:py-4 md:px-10"
                                     >
                                         Lebih Lanjut
                                     </a>
@@ -89,7 +90,7 @@ export default function HeroSlider() {
                                 <div className="shadow">
                                     <a
                                         href="#"
-                                        className="w-9/12 sm:w-full flex items-center justify-center p-1 sm:px-8 py-3 rounded-full border border-transparent text-base leading-6 font-regular text-white mx-auto bg-bohim-sky hover:bg-bohim-blue focus:outline-none focus:border-white focus:shadow-outline-white transition duration-150 ease-in-out md:py-4 md:px-10"
+                                        className="w-9/12 sm:w-full flex items-center justify-center p-1 sm:px-8 py-3 rounded-full border border-transparent text-base leading-6 font-bold text-white mx-auto bg-bohim-sky hover:bg-bohim-blue focus:outline-none focus:border-white focus:shadow-outline-white transition duration-150 ease-in-out md:py-4 md:px-10"
                                     >
                                         Lebih Lanjut
                                     </a>

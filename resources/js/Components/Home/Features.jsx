@@ -1,6 +1,6 @@
 export default function Features() {
     return (
-        <div className="container relative mt-24 mb-10">
+        <div className="container relative mt-24">
             <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-bohim-jet tracking-wide">
                     Tertarik Untuk Ikut Berperan?
