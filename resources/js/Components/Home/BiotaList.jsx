@@ -82,7 +82,8 @@ export default function BiotaList() {
                         </div>
                     ))}
                 </div>
-                <div className="mt-5 sm:mt-8 md:mt-14 sm:flex justify-center pb-24">
+                {/* Todo: Create separatae component for this button. Reused in Article */}
+                <div className="mt-5 sm:mt-8 md:mt-14 sm:flex justify-center pb-48">
                     <div className="">
                         <a
                             href="#"
