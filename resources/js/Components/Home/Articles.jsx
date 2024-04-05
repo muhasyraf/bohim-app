@@ -23,7 +23,7 @@ export default function Articles() {
                                     />
                                     <div className="p-6 md:py-5">
                                         <p className="mb-2 text-sm">Category</p>
-                                        <h2 className="font-medium mb-2 text-2xl">
+                                        <h2 className="font-medium mb-2 text-lg">
                                             Lorem ipsum dolor sit amet,
                                             consectetur adipisicing elit.
                                             Tempora, laudantium.
@@ -46,7 +46,7 @@ export default function Articles() {
                                     <p className="mb-2 md:mb-0 md:mt-2 text-sm md:text-xs lg:mb-2">
                                         Category
                                     </p>
-                                    <h2 className="font-medium mb-2 text-2xl md:text-sm">
+                                    <h2 className="font-medium mb-2 text-lg md:text-sm">
                                         Lorem ipsum dolor sit amet, consectetur
                                         adipisicing elit. Tempora, laudantium.
                                     </h2>
@@ -65,7 +65,7 @@ export default function Articles() {
                                     <p className="mb-2 md:mb-0 md:mt-2 text-sm md:text-xs lg:mb-2">
                                         Category
                                     </p>
-                                    <h2 className="font-medium mb-2 text-2xl md:text-sm">
+                                    <h2 className="font-medium mb-2 text-lg md:text-sm">
                                         Lorem ipsum dolor sit amet, consectetur
                                         adipisicing elit. Tempora, laudantium.
                                     </h2>
@@ -84,7 +84,7 @@ export default function Articles() {
                                     <p className="mb-2 md:mb-0 md:mt-2 text-sm md:text-xs lg:mb-2">
                                         Category
                                     </p>
-                                    <h2 className="font-medium mb-2 text-2xl md:text-sm">
+                                    <h2 className="font-medium mb-2 text-lg md:text-sm">
                                         Lorem ipsum dolor sit amet, consectetur
                                         adipisicing elit. Tempora, laudantium.
                                     </h2>
@@ -95,7 +95,7 @@ export default function Articles() {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-12 sm:flex justify-center pb-48">
+                    <div className="mt-12 sm:flex justify-center pb-40">
                         <div className="">
                             <a
                                 href="#"

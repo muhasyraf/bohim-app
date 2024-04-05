@@ -4,6 +4,7 @@ import HeroSlider from "@/Components/Home/HeroSlider";
 import BiotaList from "@/Components/Home/BiotaList";
 import Features from "@/Components/Home/Features";
 import Articles from "@/Components/Home/Articles";
+import Report from "@/Components/Home/Report";
 
 export default function Home({ auth }) {
     return (
@@ -37,6 +38,18 @@ export default function Home({ auth }) {
                     />
                 </svg>
                 <Articles />
+                <svg
+                    viewBox="0 0 1440 200"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="-mt-32 xl:-mt-48 2xl:-mt-60"
+                >
+                    <path
+                        d="M-1.10282 32.9179C257.416 -97.7547 378.924 211.968 723.949 77.4025C1068.97 -57.1631 1442 77.4026 1442 77.4026V738H-1.10282C-1.10282 738 -259.621 163.591 -1.10282 32.9179Z"
+                        fill="#55C4CA"
+                    />
+                </svg>
+                <Report />
             </div>
             <Footer />
         </>
