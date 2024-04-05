@@ -55,14 +55,14 @@ export default function NewestArticleCard({ newestArticles }) {
                         return (
                             <div
                                 key={article.id}
-                                className="flex gap-2 bg-white shadow-lg rounded-2xl overflow-hidden"
+                                className="flex gap-1 bg-white shadow-lg rounded-2xl overflow-hidden"
                             >
                                 <img
-                                    className="h-auto w-32 object-cover object-center"
+                                    className="h-32 w-auto object-center rounded-2xl m-2 md:m-4 shadow-md"
                                     src={article.thumbnail}
                                     alt={article.title}
                                 />
-                                <div className="flex flex-col justify-between p-4 w-full">
+                                <div className="flex flex-col justify-between p-2 md:p-4 w-full">
                                     <div className="flex flex-col gap-2">
                                         <div className="flex flex-wrap gap-1">
                                             {article.categories.map(
@@ -76,7 +76,7 @@ export default function NewestArticleCard({ newestArticles }) {
                                                 )
                                             )}
                                         </div>
-                                        <h3 className="font-semibold text-base text-gray-800">
+                                        <h3 className="font-semibold text-base text-gray-800 line-clamp-2">
                                             {article.title}
                                         </h3>
                                     </div>

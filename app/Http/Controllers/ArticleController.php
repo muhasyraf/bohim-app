@@ -72,9 +72,12 @@ class ArticleController extends Controller
     public function show(string $id)
     {
         $article = Article::with('categories', 'user')->find($id);
-        $user = User::find($article->user_id);
+
+        // retrieve 12 random articles
+        $relatedArticles = Article::with('categories')->inRandomOrder()->limit(12)->get();
         return Inertia::render('Article/Show', [
-            'article' => $article
+            'article' => $article,
+            'relatedArticles' => $relatedArticles
         ]);
     }
 
