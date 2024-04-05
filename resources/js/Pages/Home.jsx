@@ -11,7 +11,7 @@ export default function Home({ auth }) {
         <>
             <Header user={auth.user} />
             {/* Hero Section */}
-            <div className="mt-12 mb-16">
+            <div className="mt-12 mb-10">
                 <HeroSlider />
                 <Features />
                 {/* cursive svg */}

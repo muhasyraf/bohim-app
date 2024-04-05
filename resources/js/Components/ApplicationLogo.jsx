@@ -1,5 +1,9 @@
-export default function ApplicationLogo(props) {
+export default function ApplicationLogo(classes) {
     return (
-        <img src="/assets/img/logo/logo-header.png" alt="header-logo"/>
+        <img
+            src="/assets/img/logo/logo.png"
+            alt="logo"
+            className="w-16 h-auto"
+        />
     );
 }

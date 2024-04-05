@@ -11,8 +11,9 @@ export default function Header({ user }) {
             <ul className="navigation max-w-screen-2xl flex flex-wrap justify-between items-center relative mx-auto py-3 px-5 md:font-light">
                 <Link className="logo" href="#">
                     <img
-                        src="/assets/img/logo/logo-header.png"
+                        src="/assets/img/logo/logo.png"
                         alt="header-logo"
+                        className="w-16 h-auto"
                     />
                 </Link>
                 <input type="checkbox" id="check" />
@@ -57,7 +58,7 @@ export default function Header({ user }) {
                             Campaign
                         </NavLink>
                     </li>
-                    <li className="w-3/4 px-4 mt-5 md:mt-0.5 md:px-0 md:max-w-max">
+                    <li className="px-4 mt-5 md:mt-0.5 md:px-0 md:max-w-max">
                         {user ? (
                             <div className="flex items-center">
                                 <Dropdown>
