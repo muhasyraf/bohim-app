@@ -69,12 +69,14 @@ class ArticleController extends Controller
     /**
      * Display the specified article.
      */
-    public function show(string $id)
+    public function show(string $slug)
     {
-        $article = Article::with('categories', 'user')->find($id);
+        $article = Article::with('categories', 'user')->where('slug', $slug)->first();
 
-        // retrieve 12 random articles
-        $relatedArticles = Article::with('categories')->inRandomOrder()->limit(12)->get();
+        $relatedArticles = Article::with('categories')->whereHas('categories', function ($query) use ($article) {
+            $query->whereIn('categories.id', $article->categories->pluck('id'));
+        })->where('id', '!=', $article->id)->get();
+
         return Inertia::render('Article/Show', [
             'article' => $article,
             'relatedArticles' => $relatedArticles

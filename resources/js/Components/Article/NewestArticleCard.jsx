@@ -15,7 +15,7 @@ export default function NewestArticleCard({ newestArticles }) {
                                 src={article.thumbnail}
                                 alt={article.title}
                             />
-                            <div className="flex flex-col justify-between p-4 h-[12rem]">
+                            <div className="flex flex-col justify-between p-6 h-[17rem]">
                                 <div className="flex flex-col gap-2">
                                     <div className="flex flex-wrap gap-1">
                                         {article.categories.map((category) => (
@@ -35,7 +35,7 @@ export default function NewestArticleCard({ newestArticles }) {
                                     <Link
                                         href={route(
                                             "articles.show",
-                                            article.id
+                                            article.slug
                                         )}
                                         className="text-lg underline hover:text-bohim-blue"
                                     >
@@ -84,7 +84,7 @@ export default function NewestArticleCard({ newestArticles }) {
                                         <Link
                                             href={route(
                                                 "articles.show",
-                                                article.id
+                                                article.slug
                                             )}
                                             className="text-xs underline hover:text-bohim-blue"
                                         >

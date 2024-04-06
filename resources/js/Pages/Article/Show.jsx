@@ -1,12 +1,12 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head, Link } from "@inertiajs/react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import ArticleCard from "@/Components/Article/ArticleCard";
 
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import "swiper/css/scrollbar";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function Show({ auth, article, relatedArticles }) {
     const formattedDate = (date) => {
@@ -66,77 +66,57 @@ export default function Show({ auth, article, relatedArticles }) {
                             {article.title}
                         </h1>
                         <div className="mt-4 flex flex-col gap-2 max-sm:text-justify">
-                            {/* divide every line spacing with new paragraph */}
                             {article.content.split("\n").map((line, index) => (
-                                <p
-                                    key={index}
-                                    className="text-lg text-gray-700"
-                                >
-                                    {line}
+                                <div key={index} className="overflow-visible">
+                                    <p className="text-lg text-gray-700">
+                                        {line}
+                                    </p>
                                     {index === 2 && (
                                         <img
-                                            className="w-full"
+                                            className="w-screen h-auto mt-4 mb-4"
                                             src={article.thumbnail}
                                             alt={article.title}
                                         />
                                     )}
-                                </p>
+                                </div>
                             ))}
                         </div>
-                        {/* show swiper of related articles with 3 article cards per view */}
-                        {/* <Swiper
-                            modules={[Navigation, Pagination, Scrollbar, A11y]}
-                            spaceBetween={50}
-                            slidesPerView={3}
-                            navigation
-                            pagination={{ clickable: true }}
-                        >
-                            {relatedArticles?.map((relatedArticle) => (
-                                <SwiperSlide key={relatedArticle.id}>
-                                    <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
-                                        <img
-                                            className="w-auto h-32 object-cover object-center"
-                                            src={relatedArticle.thumbnail}
-                                            alt={relatedArticle.title}
-                                        />
-                                        <div className="flex flex-col justify-between p-4 h-[10.5rem]">
-                                            <div className="flex flex-col gap-2">
-                                                <div className="flex flex-wrap gap-1">
-                                                    {relatedArticle.categories.map(
-                                                        (category) => (
-                                                            <span
-                                                                key={
-                                                                    category.id
-                                                                }
-                                                                className="px-2 py-1 text-sm bg-gray-200 text-gray-800 rounded-full"
-                                                            >
-                                                                {category.name}
-                                                            </span>
-                                                        )
-                                                    )}
-                                                </div>
-                                                <h3 className="font-semibold text-lg text-gray-800 line-clamp-2">
-                                                    {relatedArticle.title}
-                                                </h3>
-                                            </div>
-                                            <div className="mt-2">
-                                                <Link
-                                                    href={route(
-                                                        "articles.show",
-                                                        relatedArticle.id
-                                                    )}
-                                                    className="text-sm underline hover:text-bohim-blue"
-                                                >
-                                                    Read More
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper> */}
                     </div>
                 </div>
+            </div>
+            <div className="pb-8 mb-4 pt-4 px-1 md:px-4 mx-auto bg-bohim-sky">
+                <h2 className="text-4xl font-semibold text-white text-center pt-6">
+                    Artikel terkait
+                </h2>
+                <Swiper
+                    modules={[Navigation, Pagination]}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                    }}
+                    navigation
+                    pagination={{ clickable: true }}
+                    className="mySwiper"
+                >
+                    {relatedArticles.map((relatedArticle) => (
+                        <SwiperSlide
+                            key={relatedArticle.id}
+                            className="py-8 md:py-10 px-10 lg:px-12 xl:px-16"
+                        >
+                            <ArticleCard article={relatedArticle} />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
         </AuthenticatedLayout>
     );

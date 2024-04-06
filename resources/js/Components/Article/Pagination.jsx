@@ -11,7 +11,7 @@ export default function Pagination({
     }
     return (
         <div className="grid md:grid-cols-3 w-full gap-4 px-4">
-            <div className="justify-self-start"></div>
+            <div className="justify-self-start max-sm:hidden"></div>
             <ul className="flex gap-2 justify-self-center">
                 <li>
                     <button

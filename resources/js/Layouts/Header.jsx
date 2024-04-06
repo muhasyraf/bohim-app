@@ -55,7 +55,7 @@ export default function Header({ user }) {
                             Campaign
                         </NavLink>
                     </li>
-                    <li className="w-3/4 px-4 mt-5 md:mt-0.5 md:px-0 md:max-w-max">
+                    <li className="mt-3 max-w-max md:mt-1">
                         {user ? (
                             <div className="flex items-center">
                                 <Dropdown>
