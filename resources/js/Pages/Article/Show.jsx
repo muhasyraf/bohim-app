@@ -1,20 +1,30 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import { Head, usePage, Link, useForm } from "@inertiajs/react";
+import { Head, Link } from "@inertiajs/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import ArticleCard from "@/Components/Article/ArticleCard";
 
-export default function Show({ auth, article, user }) {
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+export default function Show({ auth, article, relatedArticles }) {
+    const formattedDate = (date) => {
+        return new Date(date).toDateString();
+    };
     return (
         <AuthenticatedLayout user={auth.user}>
             <Head title={article.title} />
 
             <div className="max-w-7xl mx-auto pt-24 pb-6 sm:px-6 min-h-screen">
-                <div className="px-4 py-6 sm:px-0 flex items-start gap-8">
+                <div className="px-4 py-6 md:px-2 flex flex-col md:flex-row items-center md:items-start gap-5 md:gap-8">
                     <div className="flex items-center pt-4">
                         <div className="ml-2 flex flex-col items-center gap-2">
-                            {user.profile_photo_url ? (
+                            {article.user.profile_photo_url ? (
                                 <img
                                     className="h-12 w-12 rounded-full"
-                                    src={user.profile_photo_url}
-                                    alt={user.name}
+                                    src={article.user.profile_photo_url}
+                                    alt={article.user.name}
                                 />
                             ) : (
                                 <svg
@@ -27,27 +37,86 @@ export default function Show({ auth, article, user }) {
                                 </svg>
                             )}
                             <div className="text-base font-medium text-gray-900">
-                                {user.name}
+                                {article.user.name}
+                            </div>
+                            {/* create badge categories below */}
+                            <div className="text-sm text-gray-500 flex gap-1">
+                                {article.categories.map((category) => (
+                                    <span
+                                        key={category.id}
+                                        className="px-2 py-1 bg-gray-200 text-gray-800 rounded-full"
+                                    >
+                                        {category.name}
+                                    </span>
+                                ))}
                             </div>
                             <div className="text-sm text-gray-500">
-                                Created at: {article.created_at}
+                                Created at: {formattedDate(article.created_at)}
                             </div>
-                            <div className="text-sm text-gray-500">
-                                Updated at: {article.updated_at}
-                            </div>
+                            {article.created_at !== article.updated_at && (
+                                <div className="text-sm text-gray-500">
+                                    Updated at:{" "}
+                                    {formattedDate(article.updated_at)}
+                                </div>
+                            )}
                         </div>
                     </div>
-                    <div className="sm:flex sm:flex-col sm:items-center sm:justify-center">
-                        <h1 className="text-5xl font-semibold text-gray-900">
+                    <div className="flex flex-col items-center justify-center">
+                        <h1 className="text-3xl sm:text-6xl sm:mb-4 font-semibold text-gray-900 text-center">
                             {article.title}
                         </h1>
-                        <div className="mt-4">
-                            <p className="text-lg leading-7 text-gray-500">
-                                {article.content}
-                            </p>
+                        <div className="mt-4 flex flex-col gap-2 max-sm:text-justify">
+                            {article.content.split("\n").map((line, index) => (
+                                <div key={index} className="overflow-visible">
+                                    <p className="text-lg text-gray-700">
+                                        {line}
+                                    </p>
+                                    {index === 2 && (
+                                        <img
+                                            className="w-screen h-auto mt-4 mb-4"
+                                            src={article.thumbnail}
+                                            alt={article.title}
+                                        />
+                                    )}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="pb-8 mb-4 pt-4 px-1 md:px-4 mx-auto bg-bohim-sky">
+                <h2 className="text-4xl font-semibold text-white text-center pt-6">
+                    Artikel terkait
+                </h2>
+                <Swiper
+                    modules={[Navigation, Pagination]}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                    }}
+                    navigation
+                    pagination={{ clickable: true }}
+                    className="mySwiper"
+                >
+                    {relatedArticles.map((relatedArticle) => (
+                        <SwiperSlide
+                            key={relatedArticle.id}
+                            className="py-8 md:py-10 px-10 lg:px-12 xl:px-16"
+                        >
+                            <ArticleCard article={relatedArticle} />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
         </AuthenticatedLayout>
     );

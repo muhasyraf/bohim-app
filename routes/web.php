@@ -41,7 +41,6 @@ Route::get('/about', function () {
     return Inertia::render('AboutUs');
 })->name('about');
 
-// guest can access this
 Route::resource('articles', ArticleController::class)->names([
     'index' => 'articles.index',
     'show' => 'articles.show',

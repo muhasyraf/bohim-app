@@ -27,7 +27,7 @@ export default function HeroSlider() {
         >
             <SwiperSlide>
                 <div
-                    className="relative w-full h-1/2 sm:h-max flex items-center justify-center md:justify-start text-center bg-cover bg-center max-w-screen-2xl lg:mx-auto"
+                    className="relative sm:h-max flex items-center justify-center md:justify-start text-center bg-cover bg-center max-w-screen-2xl lg:mx-auto"
                     style={{
                         backgroundImage: "url(/assets/img/hero/shark-hero.png)",
                     }}
@@ -64,7 +64,7 @@ export default function HeroSlider() {
             </SwiperSlide>
             <SwiperSlide>
                 <div
-                    className="relative w-full h-1/2 sm:h-max flex items-center justify-center md:justify-start text-center bg-cover bg-center max-w-screen-2xl lg:mx-auto"
+                    className="relative sm:h-max flex items-center justify-center md:justify-start text-center bg-cover bg-center max-w-screen-2xl lg:mx-auto"
                     style={{
                         backgroundImage: "url(/assets/img/hero/dolphin-hero.png)",
                     }}
