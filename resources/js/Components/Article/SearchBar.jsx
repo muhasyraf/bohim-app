@@ -22,7 +22,6 @@ export default function SearchBar({
                     }
                 }}
             />
-            {/* add X icon button for resetting the search input */}
             <div className="absolute inset-y-[1rem] right-0 flex items-center px-6 text-[#001024]">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -14,7 +14,6 @@ class ArticleCategorySeeder extends Seeder
      */
     public function run(): void
     {
-        // seed article category pivot table, i have 25 articles and 10 categories
         $articleIds = range(1, 25);
         $categoryIds = range(1, 10);
         $faker = Faker::create();
