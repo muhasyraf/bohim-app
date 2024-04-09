@@ -21,21 +21,13 @@ use App\Models\Article;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
+    return Inertia::render('Home', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
-
-// temporary route for home (navbar and header)
-Route::get('/home', function () {
-    return Inertia::render('Home', [
-        // get all articles
         'articles' => Article::with('categories', 'user')->latest()->limit(4)->get(),
     ]);
 })->name('home');
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

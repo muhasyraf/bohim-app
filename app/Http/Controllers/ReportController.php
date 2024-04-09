@@ -20,7 +20,8 @@ class ReportController extends Controller
      */
     public function index()
     {
-        $reports = Report::all();
+        // retrieve reports with user, violation, and marine biota relationship
+        $reports = Report::with('user', 'violation', 'marine_biota')->get();
         return Inertia::render('Report/Index', [
             'reports' => $reports
         ]);
