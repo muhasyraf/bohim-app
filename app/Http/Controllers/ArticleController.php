@@ -19,7 +19,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::with('categories', 'user')->get();
         return Inertia::render('Article/Index', [
             'articles' => $articles
         ]);
@@ -69,13 +69,17 @@ class ArticleController extends Controller
     /**
      * Display the specified article.
      */
-    public function show(string $id)
+    public function show(string $slug)
     {
-        $article = Article::find($id);
-        $user = User::find($article->user_id);
+        $article = Article::with('categories', 'user')->where('slug', $slug)->first();
+
+        $relatedArticles = Article::with('categories')->whereHas('categories', function ($query) use ($article) {
+            $query->whereIn('categories.id', $article->categories->pluck('id'));
+        })->where('id', '!=', $article->id)->get();
+
         return Inertia::render('Article/Show', [
             'article' => $article,
-            'user' => $user
+            'relatedArticles' => $relatedArticles
         ]);
     }
 
