@@ -7,6 +7,7 @@ use App\Http\Controllers\CampaignController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Article;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,10 @@ Route::get('/', function () {
 
 // temporary route for home (navbar and header)
 Route::get('/home', function () {
-    return Inertia::render('Home');
+    return Inertia::render('Home', [
+        // get all articles
+        'articles' => Article::with('categories', 'user')->latest()->limit(4)->get(),
+    ]);
 })->name('home');
 
 Route::get('/dashboard', function () {

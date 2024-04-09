@@ -6,7 +6,13 @@ export default function Footer() {
         <footer className="bg-bohim-snow max-w-screen-2xl mx-auto">
             <div className="container-2xl flex flex-col justify-center items-center md:flex-row md:justify-evenly md:items-start md:mx-6 lg:mx-0">
                 <div className="logo">
-                    <ApplicationLogo />
+                    <Link className="logo" href="#">
+                        <img
+                            src="/assets/img/logo/logo.png"
+                            alt="header-logo"
+                            className="w-32 h-auto md:mt-1.5 md:w-24"
+                        />
+                    </Link>
                 </div>
                 {/* contact and footer nav container */}
                 <div className="mt-5 min-[410px]:flex min-[410px]:gap-x-20 sm:gap-x-26 lg:gap-x-40 min-[410px]:justify-between md:mt-0">
@@ -19,21 +25,21 @@ export default function Footer() {
                             <ul className="text-slate-500 ps-5 min-[410px]:ps-0">
                                 <li className="flex gap-2 mb-1 md:mb-2">
                                     <img
-                                        src="/assets/img/email.png"
+                                        src="/assets/img/icons/email.png"
                                         alt="email"
                                     />
                                     <span>samudralaya@gmail.com</span>
                                 </li>
                                 <li className="flex gap-2 mb-1 md:mb-2">
                                     <img
-                                        src="/assets/img/email.png"
+                                        src="/assets/img/icons/phone.png"
                                         alt="email"
                                     />
                                     <span>021-87123182</span>
                                 </li>
                                 <li className="flex gap-2 mb-1 md:mb-2 items-start">
                                     <img
-                                        src="/assets/img/email.png"
+                                        src="/assets/img/icons/location.png"
                                         alt="email"
                                         className="object-none"
                                     />
@@ -78,32 +84,32 @@ export default function Footer() {
                             <li>
                                 <a href="">
                                     <img
-                                        src="/assets/img/facebook.png"
-                                        alt="socmed"
+                                        src="/assets/img/icons/facebook.png"
+                                        alt="facebook"
                                     />
                                 </a>
                             </li>
                             <li>
                                 <a href="">
                                     <img
-                                        src="/assets/img/facebook.png"
-                                        alt="socmed"
+                                        src="/assets/img/icons/instagram.png"
+                                        alt="instagram-link"
                                     />
                                 </a>
                             </li>
                             <li>
                                 <a href="">
                                     <img
-                                        src="/assets/img/facebook.png"
-                                        alt="socmed"
+                                        src="/assets/img/icons/twitter.png"
+                                        alt="twitter-link"
                                     />
                                 </a>
                             </li>
                             <li>
                                 <a href="">
                                     <img
-                                        src="/assets/img/facebook.png"
-                                        alt="socmed"
+                                        src="/assets/img/icons/linkedin.png"
+                                        alt="linkedin-link"
                                     />
                                 </a>
                             </li>
