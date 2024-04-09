@@ -1,6 +1,8 @@
+import { Link } from "@inertiajs/react";
+
 export default function Report() {
     return (
-        <div className="bg-bohim-sky">
+        <div className="bg-bohim-sky max-sm:pt-8">
             <div className="container relative">
                 <div className="flex flex-col md:flex-row pb-24 lg:-mt-12">
                     <div className="text-center pt-10 md:w-1/2 md:flex md:flex-col md:justify-center md:flex-wrap">
@@ -13,12 +15,12 @@ export default function Report() {
                         </h3>
                         <div className="mt-12 sm:flex justify-center">
                             <div className="">
-                                <a
-                                    href="#"
+                                <Link
+                                    href={route("reports.create")}
                                     className="w-9/12 sm:w-full flex items-center justify-center p-1 sm:px-8 py-3 rounded-full border border-transparent text-base leading-6 font-bold text-bohim-sky mx-auto bg-white hover:bg-bohim-blue hover:text-white focus:outline-none focus:border-bohim-sky transition duration-150 ease-in-out md:py-4 md:px-10"
                                 >
                                     Laporkan Sekarang!
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

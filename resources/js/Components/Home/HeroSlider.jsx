@@ -1,5 +1,11 @@
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import {
+    Navigation,
+    Pagination,
+    Scrollbar,
+    A11y,
+    Autoplay,
+} from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -11,11 +17,13 @@ import "../../../css/slider.css";
 
 export default function HeroSlider() {
     return (
-        <Swiper className="container"
+        <Swiper
+            className="container"
             // install Swiper modules
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={300}
             slidesPerView={1}
+            autoplay={{ delay: 2500 }}
             pagination={{ clickable: true, dynamicBullets: true }}
             style={{
                 "--swiper-navigation-size": "40px",
@@ -67,7 +75,8 @@ export default function HeroSlider() {
                 <div
                     className="relative sm:h-max flex items-center justify-center md:justify-start text-center bg-cover bg-center max-w-screen-2xl lg:mx-auto"
                     style={{
-                        backgroundImage: "url(/assets/img/hero/dolphin-hero.png)",
+                        backgroundImage:
+                            "url(/assets/img/hero/dolphin-hero.png)",
                     }}
                 >
                     <div className="absolute top-0 right-0 bottom-0 left-0 bg-slate-800 opacity-75" />

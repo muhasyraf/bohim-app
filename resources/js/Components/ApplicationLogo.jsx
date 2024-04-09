@@ -1,4 +1,4 @@
-export default function ApplicationLogo(classes) {
+export default function ApplicationLogo(props) {
     return (
         <img
             src="/assets/img/logo/logo-samudralaya.png"
