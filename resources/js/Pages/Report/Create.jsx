@@ -9,7 +9,8 @@ import PrimaryButton from "@/Components/PrimaryButton";
 
 export default function Create({ auth, userId, marineBiotas, violations }) {
     const { flash } = usePage().props;
-    const [showAlert, setShowAlert] = useState(false); // Add state variable
+    const [showAlert, setShowAlert] = useState(false);
+    const [otherViolation, setOtherViolation] = useState("");
     const {
         data,
         setData,
@@ -21,8 +22,8 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
         user_id: userId,
         marine_biota_id: "",
         violation_id: "",
-        action_taken: "",
         notes: "",
+        other_violation: "",
         photo: null,
         location: "",
     });
@@ -41,7 +42,6 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
         setData({
             marine_biota_id: "",
             violation_id: "",
-            action_taken: "",
             notes: "",
             photo: null,
         });
@@ -87,7 +87,7 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
                         )}
                         <form
                             onSubmit={submit}
-                            className="p-6 grid sm:grid-cols-2 sm:gap-4"
+                            className="p-6 grid sm:grid-cols-2 sm:gap-8"
                         >
                             <div className="flex flex-col gap-4">
                                 <h1 className="text-2xl sm:text-4xl font-bold py-2">
@@ -170,18 +170,19 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
                                                 value="Pelanggaran Lainnya"
                                                 className="text-sm font-medium"
                                             />
+                                            {/* add other violation input if user selected other violation in violation type, but this other violation input doesn't have its own database field, so put it in notes field */}
                                             <TextInput
                                                 id="other_violation"
                                                 type="text"
                                                 name="other_violation"
                                                 value={data.other_violation}
                                                 className="mt-1 block w-full"
-                                                onChange={(e) =>
+                                                onChange={(e) => {
                                                     setData(
                                                         "other_violation",
                                                         e.target.value
-                                                    )
-                                                }
+                                                    );
+                                                }}
                                             />
                                             <InputError
                                                 message={errors.other_violation}
@@ -191,29 +192,6 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
                                     )}
                                     <div className="py-2">
                                         <InputLabel
-                                            htmlFor="action_taken"
-                                            value="Tindakan"
-                                        />
-                                        <TextInput
-                                            id="action_taken"
-                                            type="text"
-                                            name="action_taken"
-                                            value={data.action_taken}
-                                            className="mt-1 block w-full"
-                                            onChange={(e) =>
-                                                setData(
-                                                    "action_taken",
-                                                    e.target.value
-                                                )
-                                            }
-                                        />
-                                        <InputError
-                                            message={errors.action_taken}
-                                            className="mt-2"
-                                        />
-                                    </div>
-                                    <div className="py-2">
-                                        <InputLabel
                                             htmlFor="notes"
                                             value="Catatan"
                                         />
@@ -221,6 +199,7 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
                                             id="notes"
                                             name="notes"
                                             value={data.notes}
+                                            rows={3}
                                             className="mt-1 block w-full border-gray-700 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg shadow-sm"
                                             onChange={(e) =>
                                                 setData("notes", e.target.value)
@@ -233,14 +212,38 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
                                     </div>
                                     <div className="py-2">
                                         <InputLabel
+                                            htmlFor="location"
+                                            value="Lokasi"
+                                        />
+                                        <TextInput
+                                            id="location"
+                                            type="text"
+                                            name="location"
+                                            value={data.location}
+                                            className="mt-1 block w-full"
+                                            onChange={(e) =>
+                                                setData(
+                                                    "location",
+                                                    e.target.value
+                                                )
+                                            }
+                                        />
+                                        <InputError
+                                            message={errors.location}
+                                            className="mt-2"
+                                        />
+                                    </div>
+                                    <div className="py-2">
+                                        <InputLabel
                                             htmlFor="photo"
                                             value="Foto"
                                         />
                                         <Input
                                             id="photo"
                                             type="file"
+                                            accept="image/*"
                                             name="photo"
-                                            className="mt-1 border-gray-700 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg shadow-sm"
+                                            className="mt-1 border-gray-700 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg shadow-sm w-60"
                                             onChange={handlePhoto}
                                         />
                                         <InputError
@@ -267,29 +270,23 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col justify-center items-center gap-2">
                                 <div className="py-2">
-                                    <TextInput
-                                        id="location"
-                                        type="text"
-                                        name="location"
-                                        value={data.location}
-                                        className="mt-1 block w-full"
-                                        onChange={(e) =>
-                                            setData("location", e.target.value)
-                                        }
-                                        placeholder="Lokasi anda sekarang"
-                                    />
-                                    <InputError
-                                        message={errors.location}
-                                        className="mt-2"
-                                    />
-                                </div>
-                                <div className="py-2">
-                                    <img
-                                        src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
-                                        alt=""
-                                    />
+                                    {data.photo ? (
+                                        <img
+                                            src={URL.createObjectURL(
+                                                data.photo
+                                            )}
+                                            alt=""
+                                            className="w-full h-96 rounded-lg shadow-md"
+                                        />
+                                    ) : (
+                                        <img
+                                            src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
+                                            alt=""
+                                            className="w-full h-96 rounded-lg shadow-md"
+                                        />
+                                    )}
                                 </div>
                             </div>
                         </form>

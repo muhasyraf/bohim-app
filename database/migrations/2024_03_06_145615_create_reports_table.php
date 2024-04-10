@@ -16,13 +16,10 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->foreignId('violation_id')->constrained();
             $table->foreignId('marine_biota_id')->constrained();
-
             $table->string('location');
-            $table->string('description');
+            $table->string('notes', 2500)->nullable();
             $table->string('status');
             $table->string('photo')->nullable();
-            $table->string('action_taken')->nullable();
-            $table->string('notes')->nullable();
             $table->timestamps();
         });
     }

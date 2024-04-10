@@ -54,16 +54,21 @@ class ReportController extends Controller
                 'violation_id' => 'required|exists:violations,id',
                 'marine_biota_id' => 'required|exists:marine_biotas,id',
                 'location' => 'required|string|max:255',
-                'description' => 'string|max:255',
-                'photo' => 'required',
-                'action_taken' => 'required|string|max:255',
-                'notes' => 'required|string|max:255',
+                'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+                'other_violation' => 'required_if:violation_id,5|string|max:255',
+                'notes' => 'required|string',
             ]
         );
 
+        if ($request->violation_id == 5) {
+            $notes = $request->notes . "\n" . "[Pelanggaran Lainnya: " .  $request->other_violation . "]";
+        } else {
+            $notes = $request->notes;
+        }
+
         $status = 'pending';
         $file = $request->file('photo');
-        $fileName = time() . '_' . $request->violation_id . $request->marine_biota_id . $file->getClientOriginalExtension();
+        $fileName = time() . '_' . $request->violation_id . $request->marine_biota_id . "." . $file->getClientOriginalExtension();
 
         Storage::putFileAs('reports', $file, $fileName);
         Report::create(
@@ -72,10 +77,8 @@ class ReportController extends Controller
                 'violation_id' => $request->violation_id,
                 'marine_biota_id' => $request->marine_biota_id,
                 'location' => $request->location,
-                'description' => $request->description,
                 'photo' => $fileName,
-                'action_taken' => $request->action_taken,
-                'notes' => $request->notes,
+                'notes' => $notes,
                 'status' => $status,
             ]
         );

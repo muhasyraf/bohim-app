@@ -2,15 +2,17 @@ import TextInput from "@/Components/TextInput";
 
 export default function SearchBar({
     searchTitle,
+    className = "",
     setSearchTitle,
     handleSearch,
     resetSearch,
+    context,
 }) {
     return (
-        <div className="relative flex items-center gap-2">
+        <div className={`relative flex items-center gap-2 ${className}`}>
             <TextInput
-                className="w-full bg-[#E7F3F3] border-none py-4 px-6 focus:outline-none focus:ring-2 focus:ring-bohim-sky focus:ring-opacity-50"
-                placeholder="Search article..."
+                className="w-full bg-[#E7F3F3] border-none py-3 ps-6 pe-12 focus:outline-none focus:ring-2 focus:ring-bohim-sky focus:ring-opacity-50"
+                placeholder={`Cari ${context} ...`}
                 rounded="rounded-full"
                 value={searchTitle}
                 onChange={(e) => {
