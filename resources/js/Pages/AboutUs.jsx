@@ -15,7 +15,7 @@ export default function AboutUs(props) {
                         <h1 className="hidden font-bold text-3xl lg:text-4xl text-center lg:block lg:mb-10">
                             About Us
                         </h1>
-                        <p className="text-justify font-medium sm:text-lg md:text-xl md:leading-relaxed lg:leading-loose">
+                        <p className="text-justify font-medium sm:text-lg md:text-xl lg:text-2xl md:leading-relaxed lg:leading-loose">
                             Samudralaya adalah platform web yang dirancang untuk
                             memberdayakan aktivis satwa dan pelestari lingkungan
                             dalam misi mereka melindungi biota laut dilindungi
@@ -60,7 +60,7 @@ export default function AboutUs(props) {
             <div className="pt-2 mb-12 pb-12 bg-bohim-light-blue">
                 <div className="container relative flex flex-col md:flex-row md:items-start pt-5 lg:pt-10">
                     <div className="text-justify mx-4 md:mx-auto md:w-1/2 md:text-lg md:leading-7 lg:text-xl xl:text-2xl lg:leading-loose">
-                        <ol className="list-decimal lg:mx-0 lg:ms-8">
+                        <ol className="list-decimal lg:mx-0 lg:ms-8 font-medium">
                             <li>
                                 Mengedukasi masyarakat tentang pentingnya
                                 konservasi biota laut dilindungi.
