@@ -10,7 +10,7 @@ export default function Home(props) {
     return (
         <AuthenticatedLayout user={props.auth.user}>
             <Head title="Home" />
-            <div className="mt-12 mb-10">
+            <div className="mt-12">
                 <HeroSlider />
                 <Features />
                 <svg
