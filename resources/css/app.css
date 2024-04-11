@@ -1,3 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* apply background for screen mobile and tablet screen */
+@media (max-width: 768px) {
+    .guest-background {
+        background: url("https://images.unsplash.com/photo-1624281450963-e33ac96170be?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+            no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .auth-card {
+        @apply rounded-md shadow-md bg-[#ffffffa2] backdrop-blur-md;
+    }
+}
+
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #B7FFF9 #DFE9EB;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    height: 4px;
+    width: 5px;
+  }
+  *::-webkit-scrollbar-track {
+    /* border-radius: 5px; */
+    background-color: #DFE9EB;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #BCEBE7;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #DFE9EB;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    @apply bg-bohim-sky
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    @apply bg-bohim-blue
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    @apply bg-bohim-blue
+  }

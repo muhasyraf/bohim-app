@@ -1,0 +1,266 @@
+[
+    {
+        "name": "Arwana Irian",
+        "scientific_name": "Scleropages jardinii",
+        "description": "Ikan air tawar berukuran besar, biasanya berwarna keemasan dan memiliki ekor yang panjang.",
+        "status": "Kritis",
+        "category": "ikan",
+        "photo": "https://www.fishlaboratory.com/wp-content/uploads/2021/10/jardini-arowana-1536x1024.jpeg"
+    },
+    {
+        "name": "Arwana Super Red",
+        "scientific_name": "Scleropages formosus",
+        "description": "Ikan air tawar berwarna merah cerah dengan sisik besar dan ekor panjang.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://websitemurahsurabaya.com/wp-content/uploads/2022/10/Harga-Arwana-Super-Red.jpg"
+    },
+    {
+        "name": "Bambu Laut",
+        "scientific_name": "Enhalus spp.",
+        "description": "Tumbuhan laut yang memiliki daun berbentuk pita dan sering tumbuh di perairan dangkal dekat pantai.",
+        "status": "Rentan",
+        "category": "non-ikan",
+        "photo": "https://www.sainsindonesia.id/wp-content/uploads/2021/06/peristiwa-114-bambu-laut-01.jpg"
+    },
+    {
+        "name": "Banggai Cardinal Fish",
+        "scientific_name": "Pterapogon kauderni",
+        "description": "Ikan kecil dengan warna hitam dan putih kontras. Hidup dalam kelompok dan damai.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Banggai-Kardinalbarsch_%28Pterapogon_kauderni%29_-_5340.jpg/1200px-Banggai-Kardinalbarsch_%28Pterapogon_kauderni%29_-_5340.jpg?20160927140041"
+    },
+    {
+        "name": "Cucut Lanjaman",
+        "scientific_name": "Carcharhinus falciformis",
+        "description": "Ikan hiu yang memiliki bentuk tubuh yang ramping dengan punggung berwarna kebiruan dan perut putih.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Carcharhinus_falciformis_off_Cuba.jpg/1280px-Carcharhinus_falciformis_off_Cuba.jpg"
+    },
+    {
+        "name": "Dugong",
+        "scientific_name": "Dugong dugon",
+        "description": "Mamalia laut yang memiliki tubuh seperti ikan paus, hidup di perairan dangkal dan memakan rumput laut.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://asset-a.grid.id//crop/0x0:0x0/700x465/photo/bobofoto/original/3447_sumber-foto-australiangeographiccomau.jpg"
+    },
+    {
+        "name": "Hiu Gergaji",
+        "scientific_name": "Pristiophorus cirratus",
+        "description": "Hiu dengan moncong yang memanjang dan mirip gergaji, hidup di kedalaman laut yang dalam.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Oceanic_Whitetip_Shark.png/800px-Oceanic_Whitetip_Shark.png"
+    },
+    {
+        "name": "Hiu Koboi",
+        "scientific_name": "Carcharhinus amblyrhynchos",
+        "description": "Hiu dengan ukuran sedang dan sering ditemukan di perairan terumbu karang.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Grey5b.jpg/1024px-Grey5b.jpg"
+    },
+    {
+        "name": "Hiu Layan",
+        "scientific_name": "Carcharhinus melanopterus",
+        "description": "Hiu dengan punggung yang berwarna hitam dan perut putih, sering ditemukan di perairan hangat dan tropis.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://nakamaaquatics.id/wp-content/uploads/2018/11/Hiu-Karang-Blacktip-Si-Ikan-Hiu-Yang-Populer-Dipelihara.png"
+    },
+    {
+        "name": "Hiu Martil",
+        "scientific_name": "Sphyrna mokarran",
+        "description": "Hiu dengan kepala yang datar dan bentuk seperti martil, biasanya hidup di perairan tropis.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Great_hammerhead2.jpg"
+    },
+    {
+        "name": "Hiu Paus",
+        "scientific_name": "Rhincodon typus",
+        "description": "Hiu terbesar yang memakan plankton, memiliki tubuh besar dan mulut yang lebar.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://www.edgeofexistence.org/wp-content/uploads/2018/11/Rhincodon-typus_shutterstock_485405227-1000x667.jpg"
+    },
+    {
+        "name": "Ikan Napoleon",
+        "scientific_name": "Cheilinus undulatus",
+        "description": "Ikan karang berukuran besar dengan tubuh yang bulat dan warna cerah, sering menjadi target penangkapan.",
+        "status": "Terancam",
+        "category": "ikan",
+        "photo": "https://coralreefpalau.org/wp-content/uploads/2017/03/cheilinus-undulatus-ruppell.jpg"
+    },
+    {
+        "name": "Ikan Terubuk",
+        "scientific_name": "Plectropomus leopardus",
+        "description": "Ikan karang yang memiliki warna belang-belang hitam dan putih di seluruh tubuhnya.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Plectropomus_leopardus.jpg/1280px-Plectropomus_leopardus.jpg"
+    },
+    {
+        "name": "Kerang Kepala Kambing",
+        "scientific_name": "Cassis cornuta",
+        "description": "Moluska dengan cangkang yang berwarna-warni dan sering dijadikan sebagai hiasan atau perhiasan.",
+        "status": "Rentan",
+        "category": "non-ikan",
+        "photo": "https://www.underwaterkwaj.com/shell/cassid/Cassis-cornuta-jj-0161-052609.jpg"
+    },
+    {
+        "name": "Kima",
+        "scientific_name": "Tridacninae",
+        "description": "Moluska yang memiliki cangkang besar dan hidup di dasar laut, sering menjadi tempat tinggal berbagai organisme.",
+        "status": "Rentan",
+        "category": "non-ikan",
+        "photo": "https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/01/19/kima-yic-artikel-by-tionjpg-20220119124005.jpg"
+    },
+    {
+        "name": "Kima Cina",
+        "scientific_name": "Tridacna squamosa",
+        "description": "Kerang raksasa dengan cangkang berwarna-warni",
+        "status": "Rentan",
+        "category": "non-ikan",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Tridacna_squamosa_R%C3%A9union.jpg/1024px-Tridacna_squamosa_R%C3%A9union.jpg"
+    },
+    {
+        "name": "Kima Kurnia",
+        "scientific_name": "Tridacna kurniai",
+        "description": "Kerang raksasa dengan cangkang berwarna biru",
+        "status": "Hampir Punah",
+        "category": "non-ikan",
+        "photo": "https://gardaanimalia.com/wp-content/uploads/2021/11/kerang-kima.jpeg"
+    },
+    {
+        "name": "Kima Raksasa",
+        "scientific_name": "Tridacna gigas",
+        "description": "Kerang raksasa terbesar di dunia",
+        "status": "Rentan",
+        "category": "non-ikan",
+        "photo": "https://uploads-ssl.webflow.com/5e1d52bd5caa27c5134c4f27/6227eadb4bdd7421474800ff_clams32.jpg"
+    },
+    {
+        "name": "Kima Selatan",
+        "scientific_name": "Tridacna derasa",
+        "description": "Kerang raksasa dengan cangkang berwarna coklat",
+        "status": "Hampir Terancam",
+        "category": "non-ikan",
+        "photo": "https://nplimages.infradoxxs.com/cache/pcache2/01525882.jpg"
+    },
+    {
+        "name": "Kima Tapak Kuda",
+        "scientific_name": "Hippopus hippopus",
+        "description": "Kerang raksasa dengan cangkang berbentuk tapak kuda",
+        "status": "Rentan",
+        "category": "non-ikan",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Hippopus_hippopus_Vanuatu_01.jpg/1024px-Hippopus_hippopus_Vanuatu_01.jpg"
+    },
+    {
+        "name": "Kuda Laut",
+        "scientific_name": "Hippocampus sp.",
+        "description": "Ikan kecil dengan tubuh memanjang dan moncong seperti kuda",
+        "status": "Hampir Terancam",
+        "category": "ikan",
+        "photo": "https://gardaanimalia.com/wp-content/uploads/2021/09/6806074981_37036674cc_b.jpg"
+    },
+    {
+        "name": "Kuda Laut Bargibanti",
+        "scientific_name": "Hippocampus bargibanti",
+        "description": "Kuda laut dengan bintik-bintik oranye dan putih",
+        "status": "Hampir Punah",
+        "category": "non-ikan",
+        "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/60669336/medium.jpg"
+    },
+    {
+        "name": "Kuda Laut Denise",
+        "scientific_name": "Hippocampus denise",
+        "description": "Kuda laut kecil berwarna kuning",
+        "status": "Kritis",
+        "category": "non-ikan",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Hippocampus_denise_on_Annella_reticulata_-_ZooKeys-103-001-g002b.jpeg"
+    },
+    {
+        "name": "Kuda Laut Ekor Duri",
+        "scientific_name": "Hippocampus histrix",
+        "description": "Kuda laut dengan duri di tubuhnya",
+        "status": "Hampir Punah",
+        "category": "non-ikan",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Hippocampus_histrix_%28Thorny_seahorse%29.jpg/1200px-Hippocampus_histrix_%28Thorny_seahorse%29.jpg"
+    },
+    {
+        "name": "Kuda Laut Spinosissimus",
+        "scientific_name": "Hippocampus spinosissimus",
+        "description": "Kuda laut dengan duri panjang di kepalanya",
+        "status": "Kritis",
+        "category": "non-ikan",
+        "photo": "https://fishbase.mnhn.fr/images/species/Hispi_u3.jpg"
+    },
+    {
+        "name": "Kuda Laut Trimaculatus",
+        "scientific_name": "Hippocampus trimaculatus",
+        "description": "Kuda laut dengan tiga bintik hitam di tubuhnya",
+        "status": "Hampir Punah",
+        "category": "non-ikan",
+        "photo": "https://reefguide.org/pix/hippocampustrimaculatus1.jpg"
+    },
+    {
+        "name": "Lola",
+        "scientific_name": "Grampus griseus",
+        "description": "Lumba-lumba dengan tubuh yang panjang dan berwarna abu-abu, sering ditemukan di perairan hangat dan tropis.",
+        "status": "Rentan",
+        "category": "non-ikan",
+        "photo": "https://dkp.babelprov.go.id/sites/default/files/images/berita/Gambar%20Lola.jpg"
+    },
+    {
+        "name": "Pari Gergaji",
+        "scientific_name": "Pristis zijsron",
+        "description": "Pari laut dengan moncong panjang dan datar, serta gigi-gigi yang menyerupai gergaji.",
+        "status": "Terancam",
+        "category": "ikan",
+        "photo": "https://www.edgeofexistence.org/wp-content/uploads/2018/06/Sydney-aquarium.jpg"
+    },
+    {
+        "name": "Pari Manta",
+        "scientific_name": "Manta birostris",
+        "description": "Pari raksasa yang memiliki sayap lebar dan ciri khas bintik hitam di bagian perutnya.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/12/06/ikan-pari-mantajpg-20221206122826.jpg"
+    },
+    {
+        "name": "Paus Bersirip",
+        "scientific_name": "Megaptera novaeangliae",
+        "description": "Paus yang dikenal karena atraksi loncatannya di udara, memiliki sirip besar dan tubuh berwarna hitam-putih.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://live.staticflickr.com/65535/51733057846_461de90936_b.jpg"
+    },
+    {
+        "name": "Paus Biru",
+        "scientific_name": "Balaenoptera musculus",
+        "description": "Paus terbesar yang pernah ada, memiliki warna biru keabu-abuan dan tubuh yang panjang.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://environment.co/wp-content/uploads/sites/4/2024/01/squaddeepfx_photorealistic_image_of_a_blue_whale_mother_and_cal_39128ed5-e129-4267-938e-65217468be14.jpg.webp"
+    },
+    {
+        "name": "Paus Bongkok",
+        "scientific_name": "Balaenoptera physalus",
+        "description": "Paus dengan tubuh panjang yang berwarna abu-abu, hidup di semua lautan di dunia.",
+        "status": "Rentan",
+        "category": "ikan",
+        "photo": "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2021/02/021021_cg_whalesong_feat.jpg?w=1440&ssl=1"
+    },
+    {
+        "name": "Penyu",
+        "scientific_name": "Testudines",
+        "description": "Reptil laut yang memiliki cangkang dan sering berkembang biak di pantai tempat mereka bertelur.",
+        "status": "Beragam",
+        "category": "non-ikan",
+        "photo": "https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/02/15/animal-gd3295fffb_1280jpg-20220215023933.jpg"
+    }
+]
