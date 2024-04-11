@@ -9,8 +9,8 @@ import ApplicationLogo from "@/Components/ApplicationLogo";
 export default function Header({ user }) {
     return (
         <nav className="bg-bohim-snow fixed w-full z-20 top-0 left-0 md:pb-0.5">
-            <ul className="navigation max-w-screen-2xl flex flex-wrap justify-between items-center relative mx-auto py-3 px-5 md:font-light">
-                <Link className="logo" href="#">
+            <ul className="navigation max-w-screen-2xl flex flex-wrap justify-between items-center relative mx-auto py-1 px-5 md:font-light">
+                <Link className="logo" href={route("home")}>
                     <ApplicationLogo width={65} />
                 </Link>
                 <input type="checkbox" id="check" />
@@ -34,25 +34,31 @@ export default function Header({ user }) {
                     <li className="mt-3 max-w-max md:mt-1 md:ps-6">
                         <NavLink
                             href={route("articles.index")}
-                            active={route().current("articles.index")}
+                            active={route().current("biota")}
                         >
-                            Article
+                            Biota
                         </NavLink>
                     </li>
                     <li className="mt-3 max-w-max md:mt-1 md:ps-6">
                         <NavLink
-                            href={route("reports.index")}
-                            active={route().current("reports.index")}
+                            href={route("articles.index")}
+                            active={
+                                route().current("articles.index") ||
+                                route().current("articles.show")
+                            }
                         >
-                            Report
+                            Article
                         </NavLink>
                     </li>
                     <li className="mt-3 max-w-max md:mt-1 md:ps-6 md:pe-6">
                         <NavLink
-                            href={route("campaigns.index")}
-                            active={route().current("campaigns.index")}
+                            href={route("reports.index")}
+                            active={
+                                route().current("reports.index") ||
+                                route().current("reports.create")
+                            }
                         >
-                            Campaign
+                            Report
                         </NavLink>
                     </li>
                     <li className="mt-3 max-w-max md:mt-1">
@@ -101,9 +107,7 @@ export default function Header({ user }) {
                             </div>
                         ) : (
                             <Link href={route("login")}>
-                                <PrimaryButton className="text-sm">
-                                    Login
-                                </PrimaryButton>
+                                <PrimaryButton>Login</PrimaryButton>
                             </Link>
                         )}
                     </li>

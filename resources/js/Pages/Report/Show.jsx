@@ -3,14 +3,7 @@ import { Head } from "@inertiajs/react";
 
 export default function Show({ auth }) {
     return (
-        <AuthenticatedLayout
-            user={auth.user}
-            header={
-                <h2 className="font-semibold text-xl text-gray-800 leading-tight">
-                    Report Detail
-                </h2>
-            }
-        >
+        <AuthenticatedLayout user={auth.user}>
             <Head title="Report Detail" />
 
             <div className="py-12">
