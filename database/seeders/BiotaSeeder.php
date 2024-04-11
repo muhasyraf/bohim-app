@@ -23,7 +23,8 @@ class BiotaSeeder extends Seeder
                 'scientific_name' => $biota['scientific_name'],
                 'description' => $biota['description'],
                 'status' => $biota['status'],
-                'category' => $faker->randomElement(['fish', 'mammals', 'coral', 'crustaceans', 'molluscs', 'echinoderms', 'sponges', 'cnidarians', 'tunicates', 'worms']),
+                'category' => $biota['category'],
+                'photo' => $biota['photo'],
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

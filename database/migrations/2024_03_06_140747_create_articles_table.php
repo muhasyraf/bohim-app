@@ -16,8 +16,8 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->string('thumbnail');
             $table->string('title');
-            $table->text('content');
             $table->string('slug');
+            $table->text('file');
             $table->timestamps();
         });
     }

@@ -74,7 +74,7 @@ class ReportController extends Controller
         $file = $request->file('photo');
         $fileName = time() . '_' . $request->violation_id . $request->marine_biota_id . "." . $file->getClientOriginalExtension();
 
-        Storage::putFileAs('reports', $file, $fileName);
+        Storage::putFileAs('public/reports', $file, $fileName);
         Report::create(
             [
                 'user_id' => $request->user_id,
@@ -135,7 +135,7 @@ class ReportController extends Controller
             $file = $request->file('photo');
             $fileName = time() . '_' . $request->violation_id . $request->marine_biota_id . $file->getClientOriginalExtension();
 
-            Storage::putFileAs('reports', $file, $fileName);
+            Storage::putFileAs('public/reports', $file, $fileName);
         } else {
             $fileName = $request->photo;
         }
