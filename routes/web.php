@@ -1,8 +1,13 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ArticleController;
+use Inertia\Inertia;
+use App\Models\Article;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\BiotaController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CampaignController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -40,8 +45,9 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/biota', function () {
-    return Inertia::render('Biota', [
-        'biotas' => MarineBiota::latest()->get(),
+    return Inertia::render('Biota/Index', [
+        // get all Biota
+        'biotas' => MarineBiota::get(),
     ]);
 })->name('biota');
 
