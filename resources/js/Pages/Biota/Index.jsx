@@ -74,7 +74,7 @@ export default function Index({ biotas, auth }) {
                                     >
                                         <div>
                                             <img
-                                                className="rounded-lg mx-auto"
+                                                className="rounded-lg mx-auto w-full h-48 object-cover object-center"
                                                 src={biota.photo}
                                                 alt=""
                                             />
@@ -88,42 +88,42 @@ export default function Index({ biotas, auth }) {
                                 ))}
                             </div>
                             <Modal show={showModal} onClose={closeModal}>
-                            <div className="grid grid-cols-2">
-                                <div className="col-span-1">
-                                    <img
-                                        className="object-cover object-center w-full h-full"
-                                        src={selectedBiota.photo}
-                                        alt=""
-                                    />
+                                <div className="grid grid-cols-2">
+                                    <div className="col-span-1">
+                                        <img
+                                            className="object-cover object-center w-full h-full"
+                                            src={selectedBiota.photo}
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className="col-span-1 flex flex-col items-center justify-center p-6 text-center gap-4">
+                                        <div className="flex flex-col gap-1">
+                                            <h5 className="text-xl font-extrabold tracking-wide text-bohim-jet">
+                                                {selectedBiota.name}
+                                            </h5>
+                                            <p className="text-sm italic text-bohim-jet">
+                                                {selectedBiota.scientific_name}
+                                            </p>
+                                        </div>
+                                        <div className="flex flex-col gap-1">
+                                            <p className="text-md font-bold text-bohim-jet">
+                                                Deskripsi
+                                            </p>
+                                            <p className="text-md text-bohim-jet overflow-y-auto max-h-40">
+                                                {selectedBiota.description}
+                                            </p>
+                                        </div>
+                                        <div className="flex flex-col gap-1">
+                                            <p className="text-md font-bold mt-1 text-bohim-jet">
+                                                Status
+                                            </p>
+                                            <p className="text-md font-bold text-red-600">
+                                                {selectedBiota.status}
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="col-span-1 flex flex-col items-center justify-center p-6 text-center gap-4">
-                                    <div className="flex flex-col gap-1">
-                                        <h5 className="text-xl font-extrabold tracking-wide text-bohim-jet">
-                                            {selectedBiota.name}
-                                        </h5>
-                                        <p className="text-sm italic text-bohim-jet">
-                                            {selectedBiota.scientific_name}
-                                        </p>
-                                    </div>
-                                    <div className="flex flex-col gap-1">
-                                        <p className="text-md font-bold text-bohim-jet">
-                                            Deskripsi
-                                        </p>
-                                        <p className="text-md text-bohim-jet overflow-y-auto max-h-40">
-                                            {selectedBiota.description}
-                                        </p>
-                                    </div>
-                                    <div className="flex flex-col gap-1">
-                                        <p className="text-md font-bold mt-1 text-bohim-jet">
-                                            Status
-                                        </p>
-                                        <p className="text-md font-bold text-red-600">
-                                            {selectedBiota.status}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Modal>
+                            </Modal>
                         </>
                     ) : (
                         <div className="flex flex-col justify-center items-center p-4">
@@ -152,7 +152,7 @@ export default function Index({ biotas, auth }) {
                                 >
                                     <div>
                                         <img
-                                            className="rounded-lg mx-auto"
+                                            className="rounded-lg mx-auto w-full h-48 object-cover object-center"
                                             src={biota.photo}
                                             alt=""
                                         />
