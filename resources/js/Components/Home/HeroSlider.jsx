@@ -14,6 +14,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../../css/slider.css";
+import { Link } from "@inertiajs/react";
 
 export default function HeroSlider() {
     return (
@@ -35,7 +36,7 @@ export default function HeroSlider() {
         >
             <SwiperSlide>
                 <div
-                    className="relative sm:h-max flex items-center justify-center md:justify-start text-center bg-cover bg-center max-w-screen-2xl lg:mx-auto"
+                    className="relative sm:h-max flex items-center justify-center md:justify-start text-center bg-cover bg-center max-w-[1920px] lg:mx-auto"
                     style={{
                         backgroundImage: "url(/assets/img/hero/shark-hero.png)",
                     }}
@@ -59,12 +60,12 @@ export default function HeroSlider() {
                             {/* Todo: make this button as separate component be reused */}
                             <div className="mt-5 sm:mt-8 sm:flex justify-center md:justify-start pb-24 sm:pb-32 md:pb-48">
                                 <div className="shadow">
-                                    <a
+                                    <Link
                                         href="#"
                                         className="w-9/12 sm:w-full flex items-center justify-center p-1 sm:px-8 py-3 rounded-full border border-transparent text-base leading-6 font-bold text-white mx-auto bg-bohim-sky hover:bg-bohim-blue focus:outline-none focus:border-white focus:shadow-outline-white transition duration-150 ease-in-out md:py-4 md:px-10"
                                     >
                                         Lebih Lanjut
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +74,7 @@ export default function HeroSlider() {
             </SwiperSlide>
             <SwiperSlide>
                 <div
-                    className="relative sm:h-max flex items-center justify-center md:justify-start text-center bg-cover bg-center max-w-screen-2xl lg:mx-auto"
+                    className="relative sm:h-max flex items-center justify-center md:justify-start text-center bg-cover bg-center max-w-[1920px] lg:mx-auto"
                     style={{
                         backgroundImage:
                             "url(/assets/img/hero/dolphin-hero.png)",

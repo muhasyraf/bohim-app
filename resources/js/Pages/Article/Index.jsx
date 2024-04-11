@@ -1,6 +1,6 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head, Link } from "@inertiajs/react";
-import SearchBar from "@/Components/Article/SearchBar";
+import SearchBar from "@/Components/SearchBar";
 import SectionHeading from "@/Components/Article/SectionHeading";
 import NewestArticleCard from "@/Components/Article/NewestArticleCard";
 import LatestUpdatedArticleCard from "@/Components/Article/LatestUpdatedArticleCard";
@@ -57,6 +57,7 @@ export default function Index({ auth, articles }) {
                         setSearchTitle={setSearchTitle}
                         handleSearch={handleSearch}
                         resetSearch={resetSearch}
+                        context="artikel"
                     />
                 </div>
                 {isSearching ? (

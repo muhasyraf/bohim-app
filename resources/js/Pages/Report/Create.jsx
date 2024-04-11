@@ -6,10 +6,12 @@ import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import { Input } from "@/Components/ui/input";
 import PrimaryButton from "@/Components/PrimaryButton";
+import Modal from "@/Components/Modal";
+import SecondaryButton from "@/Components/SecondaryButton";
 
 export default function Create({ auth, userId, marineBiotas, violations }) {
     const { flash } = usePage().props;
-    const [showAlert, setShowAlert] = useState(false); // Add state variable
+    const [showModal, setShowModal] = useState(false);
     const {
         data,
         setData,
@@ -21,8 +23,8 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
         user_id: userId,
         marine_biota_id: "",
         violation_id: "",
-        action_taken: "",
         notes: "",
+        other_violation: "",
         photo: null,
         location: "",
     });
@@ -32,8 +34,9 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
         create(route("reports.store"), {
             preserveScroll: true,
             onError: () => console.log(errors),
-            onSuccess: () => resetForm(),
-            onFinish: () => reset(),
+            onSuccess: () => {
+                resetForm(), reset();
+            },
         });
         console.log(data);
     };
@@ -41,7 +44,6 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
         setData({
             marine_biota_id: "",
             violation_id: "",
-            action_taken: "",
             notes: "",
             photo: null,
         });
@@ -52,9 +54,8 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
 
     useEffect(() => {
         if (flash.success) {
-            setShowAlert(true);
+            setShowModal(true);
             setTimeout(() => {
-                setShowAlert(false);
                 flash.success = null;
             }, 2500);
         }
@@ -74,20 +75,43 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        {showAlert && ( // Conditionally render the alert based on showAlert
-                            <div
-                                className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
-                                role="alert"
-                            >
-                                <strong className="font-bold">Success!</strong>
-                                <span className="block sm:inline">
-                                    {flash.success}
-                                </span>
-                            </div>
-                        )}
+                        <Modal show={showModal}>
+                            {/* if success show success alert, if there is something wrong in validation show also */}
+                            {flash.success && (
+                                <div
+                                    className="bg-green-100 border border-green-400 text-green-700 p-4 rounded-xl flex flex-col justify-center items-center text-center gap-2"
+                                    role="alert"
+                                >
+                                    <strong className="font-bold text-lg md:text-2xl">
+                                        Sukses!
+                                    </strong>
+                                    <div className="flex flex-col">
+                                        <p className="text-base md:text-xl">
+                                            {flash.success}
+                                        </p>
+
+                                        <p className="text-sm md:text-lg">
+                                            Periksa progress laporan kamu{" "}
+                                            <Link
+                                                href={route("reports.index")}
+                                                className="underline text-bohim-sky hover:text-bohim-blue cursor-pointer"
+                                            >
+                                                di sini!
+                                            </Link>
+                                        </p>
+                                    </div>
+                                    {/* close modal button here */}
+                                    <SecondaryButton
+                                        onClick={() => setShowModal(false)}
+                                    >
+                                        Tutup
+                                    </SecondaryButton>
+                                </div>
+                            )}
+                        </Modal>
                         <form
                             onSubmit={submit}
-                            className="p-6 grid sm:grid-cols-2 sm:gap-4"
+                            className="p-6 grid sm:grid-cols-2 sm:gap-8"
                         >
                             <div className="flex flex-col gap-4">
                                 <h1 className="text-2xl sm:text-4xl font-bold py-2">
@@ -176,12 +200,12 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
                                                 name="other_violation"
                                                 value={data.other_violation}
                                                 className="mt-1 block w-full"
-                                                onChange={(e) =>
+                                                onChange={(e) => {
                                                     setData(
                                                         "other_violation",
                                                         e.target.value
-                                                    )
-                                                }
+                                                    );
+                                                }}
                                             />
                                             <InputError
                                                 message={errors.other_violation}
@@ -191,29 +215,6 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
                                     )}
                                     <div className="py-2">
                                         <InputLabel
-                                            htmlFor="action_taken"
-                                            value="Tindakan"
-                                        />
-                                        <TextInput
-                                            id="action_taken"
-                                            type="text"
-                                            name="action_taken"
-                                            value={data.action_taken}
-                                            className="mt-1 block w-full"
-                                            onChange={(e) =>
-                                                setData(
-                                                    "action_taken",
-                                                    e.target.value
-                                                )
-                                            }
-                                        />
-                                        <InputError
-                                            message={errors.action_taken}
-                                            className="mt-2"
-                                        />
-                                    </div>
-                                    <div className="py-2">
-                                        <InputLabel
                                             htmlFor="notes"
                                             value="Catatan"
                                         />
@@ -221,6 +222,7 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
                                             id="notes"
                                             name="notes"
                                             value={data.notes}
+                                            rows={3}
                                             className="mt-1 block w-full border-gray-700 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg shadow-sm"
                                             onChange={(e) =>
                                                 setData("notes", e.target.value)
@@ -233,14 +235,38 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
                                     </div>
                                     <div className="py-2">
                                         <InputLabel
+                                            htmlFor="location"
+                                            value="Lokasi"
+                                        />
+                                        <TextInput
+                                            id="location"
+                                            type="text"
+                                            name="location"
+                                            value={data.location}
+                                            className="mt-1 block w-full"
+                                            onChange={(e) =>
+                                                setData(
+                                                    "location",
+                                                    e.target.value
+                                                )
+                                            }
+                                        />
+                                        <InputError
+                                            message={errors.location}
+                                            className="mt-2"
+                                        />
+                                    </div>
+                                    <div className="py-2">
+                                        <InputLabel
                                             htmlFor="photo"
                                             value="Foto"
                                         />
                                         <Input
                                             id="photo"
                                             type="file"
+                                            accept="image/*"
                                             name="photo"
-                                            className="mt-1 border-gray-700 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg shadow-sm"
+                                            className="mt-1 border-gray-700 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg shadow-sm w-60"
                                             onChange={handlePhoto}
                                         />
                                         <InputError
@@ -267,29 +293,23 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col justify-center items-center gap-2">
                                 <div className="py-2">
-                                    <TextInput
-                                        id="location"
-                                        type="text"
-                                        name="location"
-                                        value={data.location}
-                                        className="mt-1 block w-full"
-                                        onChange={(e) =>
-                                            setData("location", e.target.value)
-                                        }
-                                        placeholder="Lokasi anda sekarang"
-                                    />
-                                    <InputError
-                                        message={errors.location}
-                                        className="mt-2"
-                                    />
-                                </div>
-                                <div className="py-2">
-                                    <img
-                                        src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
-                                        alt=""
-                                    />
+                                    {data.photo ? (
+                                        <img
+                                            src={URL.createObjectURL(
+                                                data.photo
+                                            )}
+                                            alt=""
+                                            className="w-full h-96 rounded-lg shadow-md"
+                                        />
+                                    ) : (
+                                        <img
+                                            src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
+                                            alt=""
+                                            className="w-full h-96 rounded-lg shadow-md"
+                                        />
+                                    )}
                                 </div>
                             </div>
                         </form>
