@@ -5,14 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Article;
-use App\Models\User;
 use Illuminate\Support\Facades\Storage;
+use App\Services\MarkdownService;
+
 
 class ArticleController extends Controller
 {
-    public function __construct()
+    protected $markdownService;
+    public function __construct(MarkdownService $markdownService)
     {
         $this->middleware('auth')->only(['create', 'store', 'edit', 'update', 'destroy']);
+        $this->markdownService = $markdownService;
     }
     /**
      * Display a listing of the article.
@@ -72,6 +75,8 @@ class ArticleController extends Controller
     public function show(string $slug)
     {
         $article = Article::with('categories', 'user')->where('slug', $slug)->first();
+        $parsedContent = Storage::get('public/articles/' . $article->slug . '.md');
+        // $parsedContent = $this->markdownService->parse($articleMarkdown);
 
         $relatedArticles = Article::with('categories')->whereHas('categories', function ($query) use ($article) {
             $query->whereIn('categories.id', $article->categories->pluck('id'));
@@ -79,6 +84,7 @@ class ArticleController extends Controller
 
         return Inertia::render('Article/Show', [
             'article' => $article,
+            'parsedContent' => $parsedContent,
             'relatedArticles' => $relatedArticles
         ]);
     }

@@ -23,8 +23,8 @@ class BiotaSeeder extends Seeder
                 'scientific_name' => $biota['scientific_name'],
                 'description' => $biota['description'],
                 'status' => $biota['status'],
-                'photo' => $biota['photo'],
                 'category' => $biota['category'],
+                'photo' => $biota['photo'],
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

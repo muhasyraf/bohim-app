@@ -6,6 +6,8 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Article;
 use Faker\Factory as Faker;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
 
 class ArticleSeeder extends Seeder
@@ -15,18 +17,20 @@ class ArticleSeeder extends Seeder
      */
     public function run(): void
     {
+        $biotas = File::json(base_path('database/data/biota-article.json'));
         $faker = Faker::create();
-        for ($i = 1; $i <= 25; $i++) {
-            Article::insert([
-                [
-                    'user_id' => $faker->randomElement([1, 2]),
-                    'slug' => $faker->slug(),
-                    'thumbnail' => $faker->imageUrl(640, 480, 'animals', true),
-                    'title' => $faker->sentence(6, true),
-                    'content' => $faker->paragraphs(4, true),
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
+        foreach ($biotas as $biota) {
+            $title = $biota['name'] . ' - ' . $biota['scientific_name'];
+            $slugTitle = Str::slug($title);
+            $markdownFile = $slugTitle . '.md';
+            Article::updateOrCreate([
+                'user_id' => $faker->randomElement([1, 2, 3]),
+                'title' => $title,
+                'thumbnail' => $biota['photo'],
+                'file' => $markdownFile,
+                'slug' => $slugTitle,
+                'created_at' => now(),
+                'updated_at' => now(),
             ]);
         }
     }

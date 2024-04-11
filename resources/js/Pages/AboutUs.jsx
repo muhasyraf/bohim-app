@@ -1,12 +1,13 @@
 import { Head } from "@inertiajs/react";
 import Header from "@/Layouts/Header";
 import Footer from "@/Layouts/Footer";
+import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 
 export default function AboutUs(props) {
     return (
-        <>
-            <Header user={props.auth.user} />
-            <div className="mt-12">
+        <AuthenticatedLayout user={props.auth.user}>
+            <Head title="About Us" />
+            <div className="mt-12 mb-10">
                 <h1 className="font-bold text-3xl pt-20 mb-6 md:mb-10 text-center lg:hidden">
                     About Us
                 </h1>
@@ -89,7 +90,6 @@ export default function AboutUs(props) {
                     </div>
                 </div>
             </div>
-            <Footer />
-        </>
+        </AuthenticatedLayout>
     );
 }

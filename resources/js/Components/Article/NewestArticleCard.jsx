@@ -58,7 +58,7 @@ export default function NewestArticleCard({ newestArticles }) {
                                 className="flex gap-1 bg-white shadow-lg rounded-2xl overflow-hidden"
                             >
                                 <img
-                                    className="h-32 w-auto object-center rounded-2xl m-2 md:m-4 shadow-md"
+                                    className="h-32 w-[11.5rem] object-center rounded-2xl m-2 md:m-4 shadow-md"
                                     src={article.thumbnail}
                                     alt={article.title}
                                 />
