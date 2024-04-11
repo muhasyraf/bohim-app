@@ -1,6 +1,11 @@
+import { Head } from "@inertiajs/react";
+
 export default function Guest({ children }) {
     return (
         <div className="min-h-screen flex items-center guest-background md:bg-white">
+            <Head>
+                <link rel="icon" href="/assets/img/logo/logo-samudralaya.png" />
+            </Head>
             <div className="flex-1 mx-auto">
                 <div className="max-md:px-4 md:flex md:flex-row">
                     <div className="h-auto md:w-1/2 hidden md:block">

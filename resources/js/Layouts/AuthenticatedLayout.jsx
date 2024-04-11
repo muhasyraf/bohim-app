@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/Layouts/Header";
 import Footer from "@/Layouts/Footer";
+import { Head } from "@inertiajs/react";
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
@@ -8,6 +9,9 @@ export default function Authenticated({ user, header, children }) {
 
     return (
         <div className="min-h-screen">
+            <Head>
+                <link rel="icon" href="/assets/img/logo/logo-samudralaya.png" />
+            </Head>
             <Header user={user} />
             {header && (
                 <header className="bg-white shadow">
