@@ -6,7 +6,7 @@ export default function AboutUs(props) {
     return (
         <>
             <Header user={props.auth.user} />
-            <div className="mt-12 mb-10">
+            <div className="mt-12">
                 <h1 className="font-bold text-3xl pt-20 mb-6 md:mb-10 text-center lg:hidden">
                     About Us
                 </h1>
@@ -57,7 +57,7 @@ export default function AboutUs(props) {
                     </h3>
                 </div>
             </div>
-            <div className="pt-2 mb-12 pb-12 bg-bohim-light-blue">
+            <div className="pt-2 pb-12 bg-bohim-light-blue">
                 <div className="container relative flex flex-col md:flex-row md:items-start pt-5 lg:pt-10">
                     <div className="text-justify mx-4 md:mx-auto md:w-1/2 md:text-lg md:leading-7 lg:text-xl xl:text-2xl lg:leading-loose">
                         <ol className="list-decimal lg:mx-0 lg:ms-8 font-medium">

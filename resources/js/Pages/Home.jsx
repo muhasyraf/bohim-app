@@ -11,7 +11,7 @@ export default function Home(props) {
         <>
             <Header user={props.auth.user} />
             {/* Hero Section */}
-            <div className="mt-12 mb-10">
+            <div className="mt-12">
                 <HeroSlider />
                 <Features />
                 {/* cursive svg */}
