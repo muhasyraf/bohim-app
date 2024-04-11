@@ -6,6 +6,9 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\ArticleCategory;
 use Faker\Factory as Faker;
+use Illuminate\Support\Facades\File;
+use App\Models\Article;
+use App\Models\Category;
 
 class ArticleCategorySeeder extends Seeder
 {
@@ -14,19 +17,19 @@ class ArticleCategorySeeder extends Seeder
      */
     public function run(): void
     {
-        $articleIds = range(1, 25);
-        $categoryIds = range(1, 10);
-        $faker = Faker::create();
-        foreach ($articleIds as $articleId) {
-            $categoryIds = $faker->randomElements(range(1, 10), 3);
-            foreach ($categoryIds as $categoryId) {
-                ArticleCategory::insert([
-                    [
-                        'article_id' => $articleId,
-                        'category_id' => $categoryId,
-                    ],
-                ]);
-            }
+        $articleCount = Article::count();
+
+        for ($i = 1; $i <= $articleCount; $i++) {
+            ArticleCategory::insert([
+                [
+                    'article_id' => $i,
+                    'category_id' => Category::where('name', 'Edukasi')->value('id'),
+                ],
+                [
+                    'article_id' => $i,
+                    'category_id' => Category::where('name', 'Profil Biota')->value('id'),
+                ],
+            ]);
         }
     }
 }

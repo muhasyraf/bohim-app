@@ -1,20 +1,18 @@
-import Header from "@/Layouts/Header";
-import Footer from "@/Layouts/Footer";
 import HeroSlider from "@/Components/Home/HeroSlider";
 import BiotaList from "@/Components/Home/BiotaList";
 import Features from "@/Components/Home/Features";
 import Articles from "@/Components/Home/Articles";
 import Report from "@/Components/Home/Report";
+import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
+import { Head } from "@inertiajs/react";
 
 export default function Home(props) {
     return (
-        <>
-            <Header user={props.auth.user} />
-            {/* Hero Section */}
+        <AuthenticatedLayout user={props.auth.user}>
+            <Head title="Home" />
             <div className="mt-12 mb-10">
                 <HeroSlider />
                 <Features />
-                {/* cursive svg */}
                 <svg
                     viewBox="0 0 1440 200"
                     fill="none"
@@ -52,7 +50,6 @@ export default function Home(props) {
                 </svg>
                 <Report />
             </div>
-            <Footer />
-        </>
+        </AuthenticatedLayout>
     );
 }
