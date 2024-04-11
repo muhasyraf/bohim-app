@@ -36,26 +36,26 @@ Samudralaya is a web application that aims to create awareness about marine life
 git clone
 ```
 
-1. Install the dependencies
+2. Install the dependencies
 
 ```bash
 composer install
 npm install
 ```
 
-1. Create a .env file
+3. Create a .env file
 
 ```bash
 cp .env.example .env
 ```
 
-1. Generate the application key
+4. Generate the application key
 
 ```bash
 php artisan key:generate
 ```
 
-1. Update the .env file with the database credentials
+5. Update the .env file with the database credentials
 
 ```bash
 DB_CONNECTION=mysql
@@ -66,13 +66,13 @@ DB_USERNAME=root // your database username
 DB_PASSWORD= // your database password
 ```
 
-1. Migrate the database and seed the database
+6. Migrate the database and seed the database
 
 ```bash
 php artisan migrate:fresh --seed
 ```
 
-1. Link the storage folder
+7. Link the storage folder
 
 ```bash
 php artisan storage:link
