@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Kima sangat bermanfaat bagi manusia, seperti menjadi penyaring alami air laut agar tetap bersih dan jernih. Dia, Kima, bercerita bahwa kemampuannya dalam menjaga kualitas air laut membuatnya bahagia karena bisa memberikan manfaat yang besar bagi ekosistem dan manusia.
 
+![Kima](https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/01/19/kima-yic-artikel-by-tionjpg-20220119124005.jpg)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Kima memang bermanfaat bagi manusia dengan caranya sebagai penyaring alami dan penyeimbang ekosistem laut. Selain itu, Kima juga memiliki nilai ekonomis tinggi sebagai komoditas perdagangan internasional dan dalam perdagangan akuarium hias. Semua manfaat itu sangat penting bagi kesejahteraan manusia.

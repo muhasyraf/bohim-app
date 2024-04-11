@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Kima Raksasa sangat bermanfaat bagi manusia, seperti perannya sebagai filter alami air laut dan sumber protein yang berguna bagi tubuh manusia. Dia, Kima Raksasa, bercerita bahwa manfaat ini membuatnya bahagia karena bisa memberikan kontribusi yang besar bagi kebutuhan manusia, terutama dalam hal kesehatan dan keseimbangan lingkungan.
 
+![Kima Raksasa](https://uploads-ssl.webflow.com/5e1d52bd5caa27c5134c4f27/6227eadb4bdd7421474800ff_clams32.jpg)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Kima Raksasa benar-benar bermanfaat bagi manusia dengan caranya sebagai penyaring alami air laut dan sumber protein. Selain itu, Kima Raksasa juga bermanfaat sebagai olahan makanan mewah yang dapat dinikmati oleh manusia. Manfaatnya yang luas membuatnya sangat penting bagi keberlangsungan hidup manusia dan ekosistem laut.

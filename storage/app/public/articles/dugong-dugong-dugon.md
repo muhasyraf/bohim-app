@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Dugong sangat bermanfaat bagi manusia, seperti kontribusinya dalam menjaga keberagaman ekosistem laut. Dia, Dugong, bercerita bahwa perannya dalam mengatasi perubahan iklim membuatnya bahagia karena merasa turut berperan dalam menjaga keberlangsungan lingkungan.
 
+![Dugong](https://asset-a.grid.id//crop/0x0:0x0/700x465/photo/bobofoto/original/3447_sumber-foto-australiangeographiccomau.jpg)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Dugong bermanfaat bagi manusia dengan caranya seperti menjaga keberagaman ekosistem laut. Selain itu, Dugong juga berpotensi sebagai daya tarik wisata bahari yang dapat menggerakkan ekonomi lokal di sekitar perairan yang kaya akan keberagaman hayati.

@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Ikan Terubuk sangat bermanfaat bagi manusia, seperti nilai ekonomi tingginya dan kandungan nutrisinya yang baik bagi kesehatan tubuh. Dia, Ikan Terubuk, bercerita bahwa perannya dalam memberikan nutrisi yang berguna membuatnya bahagia karena bisa memberikan manfaat bagi manusia.
 
+![Ikan Terubuk](https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Plectropomus_leopardus.jpg/1280px-Plectropomus_leopardus.jpg)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Ikan Terubuk bermanfaat bagi manusia dengan cara memberikan nilai ekonomi tinggi dan kandungan nutrisi yang baik. Selain itu, Ikan Terubuk juga memiliki peran penting dalam menjaga keseimbangan ekosistem laut. Manfaat-manfaat tersebut tidak hanya penting bagi manusia tetapi juga bagi keberlangsungan ekosistem laut itu sendiri..

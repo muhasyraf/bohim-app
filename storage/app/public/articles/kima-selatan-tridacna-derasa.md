@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Kima Selatan sangat bermanfaat bagi manusia, seperti perannya sebagai penyaring alami air laut yang menjaga kebersihan laut. Dia, Kima Selatan, bercerita bahwa manfaat ini membuatnya bahagia karena dapat membantu menjaga ekosistem laut tetap sehat. Mendengar cerita tersebut, penulis menyadari bahwa Kima Selatan memang sangat bermanfaat bagi manusia dengan cara memelihara kebersihan laut. Selain itu, Kima juga bermanfaat sebagai sumber makanan mewah dan memperlancar ASI bagi ibu menyusui.
 
+![Kima Selatan](https://nplimages.infradoxxs.com/cache/pcache2/01525882.jpg)
+
 ## Paragraf 3
 
 Penulis merasa bahwa Kima Selatan perlu dilindungi karena manfaat yang luar biasa yang diberikannya bagi manusia dan lingkungan. Sayangnya, Kima Selatan juga bercerita tentang kesedihannya karena sering dieksploitasi oleh manusia tanpa mempertimbangkan keberlangsungan populasi mereka. Hal ini memunculkan pertanyaan tentang tanggung jawab manusia dalam menjaga kelestarian hewan dan lingkungan.

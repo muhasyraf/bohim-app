@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Hiu Layan sangat bermanfaat bagi manusia, seperti perannya dalam menjaga keseimbangan ekosistem laut. Dia, Hiu Layan, bercerita bahwa perannya sebagai puncak rantai makanan membuatnya bahagia karena merasa turut berkontribusi dalam menjaga kelangsungan hidup ekosistem.
 
+![Hiu Layan](https://nakamaaquatics.id/wp-content/uploads/2018/11/Hiu-Karang-Blacktip-Si-Ikan-Hiu-Yang-Populer-Dipelihara.png)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Hiu Layan bermanfaat bagi manusia dengan caranya seperti menjaga keseimbangan ekosistem laut. Selain itu, Hiu Layan juga bermanfaat dalam melindungi terumbu karang dan mengatur populasi ikan yang sehat.

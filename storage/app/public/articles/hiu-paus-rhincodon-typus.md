@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Hiu Paus sangat bermanfaat bagi manusia, seperti perannya dalam menjaga keseimbangan ekosistem laut. Dia, Hiu Paus, bercerita bahwa perannya membuatnya bahagia karena merasa turut berkontribusi dalam menjaga kelangsungan hidup ekosistem laut.
 
+![Hiu Paus](https://www.edgeofexistence.org/wp-content/uploads/2018/11/Rhincodon-typus_shutterstock_485405227-1000x667.jpg)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Hiu Paus bermanfaat bagi manusia dengan caranya seperti menjaga keseimbangan ekosistem laut. Selain itu, Hiu Paus juga bermanfaat dalam pengembangan pariwisata bahari berbasis hiu, yang memberikan dampak positif terhadap perekonomian masyarakat.

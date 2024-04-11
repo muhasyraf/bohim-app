@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Kima Kurnia sangat bermanfaat bagi manusia, seperti kemampuannya dalam menyaring air laut dan menjaga ekosistem laut. Dia, Kima Kurnia, bercerita bahwa manfaat ini membuatnya bahagia karena dapat memberikan kontribusi yang besar bagi keberlangsungan hidup manusia dan ekosistem laut.
 
+![Kima Kurnia](https://gardaanimalia.com/wp-content/uploads/2021/11/kerang-kima.jpeg)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Kima Kurnia memang bermanfaat bagi manusia dengan caranya sebagai penyaring alami dan penyeimbang ekosistem laut. Selain itu, Kima Kurnia juga menjadi sumber makanan sehat dengan kandungan proteinnya yang kaya. Tidak hanya itu, Kima Kurnia juga memiliki peran penting sebagai tempat memijah bagi organisme karang lainnya.

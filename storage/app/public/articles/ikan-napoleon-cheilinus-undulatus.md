@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Ikan Napoleon sangat bermanfaat bagi manusia, seperti daya tariknya bagi para penyelam untuk menikmati wisata alam bawah laut. Dia, Ikan Napoleon, bercerita bahwa menjadi bagian dari ekosistem yang terjaga membuatnya bahagia karena merasa berkontribusi dalam menjaga kelestarian terumbu karang.
 
+![Ikan Napoleon](https://coralreefpalau.org/wp-content/uploads/2017/03/cheilinus-undulatus-ruppell.jpg)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Ikan Napoleon bermanfaat bagi manusia dengan caranya seperti menjadi daya tarik wisata alam bawah laut. Selain itu, Ikan Napoleon juga memiliki manfaat ekonomi sebagai sumber makanan dan obat tradisional..

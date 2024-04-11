@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Kerang Kepala Kambing sangat bermanfaat bagi manusia, seperti kaya akan nutrisi dan memiliki banyak manfaat bagi kesehatan tubuh. Dia, Kerang Kepala Kambing, bercerita bahwa kandungannya yang bermanfaat membuatnya bahagia karena bisa memberikan manfaat bagi manusia.
 
+![Kerang Kepala Kambing](https://www.underwaterkwaj.com/shell/cassid/Cassis-cornuta-jj-0161-052609.jpg)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Kerang Kepala Kambing bermanfaat bagi manusia dengan cara memberikan nutrisi yang baik dan menjadi bagian penting dalam menjaga kelestarian ekosistem laut. Selain itu, Kerang Kepala Kambing juga berperan dalam menyeimbangkan populasi bintang laut mahkota duri yang dapat menyebabkan kerusakan pada karang.

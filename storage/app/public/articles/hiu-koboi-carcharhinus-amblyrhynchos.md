@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Hiu Koboi sangat bermanfaat bagi manusia, seperti perannya dalam menjaga keseimbangan rantai makanan di laut. Dia, Hiu Koboi, bercerita bahwa perannya sebagai puncak rantai makanan membuatnya bahagia karena merasa turut berkontribusi dalam menjaga keseimbangan ekosistem.
 
+![Hiu Koboi](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Grey5b.jpg/1024px-Grey5b.jpg)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Hiu Koboi bermanfaat bagi manusia dengan caranya seperti menjaga keseimbangan rantai makanan. Selain itu, Hiu Koboi juga bermanfaat ekonomis karena bagian tubuhnya dapat dimanfaatkan oleh manusia. Namun, perlu diingat bahwa penangkapan hiu harus dilakukan secara bijaksana untuk menjaga keberlanjutan populasi hiu.

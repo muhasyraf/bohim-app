@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Hiu Gergaji sangat bermanfaat bagi manusia, seperti perannya dalam menjaga keberagaman ekosistem laut. Dia, Hiu Gergaji, bercerita bahwa perannya sebagai penyeimbang ekosistem membuatnya bahagia karena merasa turut berkontribusi dalam menjaga keberlangsungan lingkungan.
 
+![Hiu Gergaji](https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Oceanic_Whitetip_Shark.png/800px-Oceanic_Whitetip_Shark.png)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Hiu Gergaji bermanfaat bagi manusia dengan caranya seperti menjaga keberagaman ekosistem laut. Selain itu, Hiu Gergaji juga bermanfaat dengan tidak membahayakan manusia dan memiliki dampak positif bagi rantai makanan di ekosistem laut.

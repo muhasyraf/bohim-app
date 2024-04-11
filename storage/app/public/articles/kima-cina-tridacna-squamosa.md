@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Kima Cina sangat bermanfaat bagi manusia, seperti sebagai penyaring alami air laut agar tetap bersih dan jernih. Dia, Kima Cina, bercerita bahwa kemampuannya dalam menjaga kualitas air laut membuatnya bahagia karena bisa memberikan manfaat yang besar bagi ekosistem dan manusia.
 
+![Kima Cina](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Tridacna_squamosa_R%C3%A9union.jpg/1024px-Tridacna_squamosa_R%C3%A9union.jpg)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Kima Cina memang bermanfaat bagi manusia dengan caranya sebagai penyaring alami dan penyeimbang ekosistem laut. Selain itu, Kima Cina juga memiliki nilai ekonomis tinggi sebagai komoditas perdagangan internasional dan kandungan gizi yang melimpah. Semua manfaat itu sangat penting bagi kesejahteraan manusia.

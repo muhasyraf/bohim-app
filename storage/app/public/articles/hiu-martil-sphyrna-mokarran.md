@@ -8,6 +8,8 @@ Sebagai makhluk hidup, penulis percaya bahwa semua memiliki alasan mengapa merek
 
 Padahal, Hiu Martil sangat bermanfaat bagi manusia, seperti perannya dalam menjaga keseimbangan ekosistem laut. Dia, Hiu Martil, bercerita bahwa perannya sebagai predator puncak membuatnya bahagia karena merasa turut berkontribusi dalam menjaga kelangsungan hidup ekosistem.
 
+![Hiu Martil](https://upload.wikimedia.org/wikipedia/commons/b/bd/Great_hammerhead2.jpg)
+
 ## Paragraf 3
 
 Mendengar cerita tersebut, penulis menyadari bahwa Hiu Martil bermanfaat bagi manusia dengan caranya seperti menjaga keseimbangan ekosistem laut. Selain itu, Hiu Martil juga bermanfaat dengan kepala uniknya yang memberikan kelebihan dalam penglihatan dan deteksi mangsa.
