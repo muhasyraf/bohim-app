@@ -3,12 +3,9 @@
 use Inertia\Inertia;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Foundation\Application;
-use App\Http\Controllers\BiotaController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\CampaignController;
 use App\Models\MarineBiota;
 
 /*
@@ -32,9 +29,6 @@ Route::get('/', function () {
 })->name('home');
 
 
-// Route::get('/dashboard', function () {
-//     return Inertia::render('Dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/about', function () {
     return Inertia::render('AboutUs');
@@ -42,7 +36,6 @@ Route::get('/about', function () {
 
 Route::get('/biota', function () {
     return Inertia::render('Biota/Index', [
-        // get all Biota
         'biotas' => MarineBiota::get(),
     ]);
 })->name('biota');
