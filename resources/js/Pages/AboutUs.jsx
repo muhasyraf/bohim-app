@@ -58,7 +58,7 @@ export default function AboutUs(props) {
                     </h3>
                 </div>
             </div>
-            <div className="pt-2 mb-12 pb-12 bg-bohim-light-blue">
+            <div className="pt-2 pb-12 bg-bohim-light-blue">
                 <div className="container relative flex flex-col md:flex-row md:items-start pt-5 lg:pt-10">
                     <div className="text-justify mx-4 md:mx-auto md:w-1/2 md:text-lg md:leading-7 lg:text-xl xl:text-2xl lg:leading-loose">
                         <ol className="list-decimal lg:mx-0 lg:ms-8 font-medium">

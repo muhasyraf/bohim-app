@@ -33,7 +33,7 @@ export default function Header({ user }) {
                     </li>
                     <li className="mt-3 max-w-max md:mt-1 md:ps-6">
                         <NavLink
-                            href={route("articles.index")}
+                            href={route("biota")}
                             active={route().current("biota")}
                         >
                             Biota

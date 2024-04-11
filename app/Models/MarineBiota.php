@@ -19,6 +19,7 @@ class MarineBiota extends Model
         'photo',
         'status',
         'population',
+        'category',
         'created_at',
         'updated_at',
     ];
