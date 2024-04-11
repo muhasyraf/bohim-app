@@ -6,11 +6,12 @@ import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import { Input } from "@/Components/ui/input";
 import PrimaryButton from "@/Components/PrimaryButton";
+import Modal from "@/Components/Modal";
+import SecondaryButton from "@/Components/SecondaryButton";
 
 export default function Create({ auth, userId, marineBiotas, violations }) {
     const { flash } = usePage().props;
-    const [showAlert, setShowAlert] = useState(false);
-    const [otherViolation, setOtherViolation] = useState("");
+    const [showModal, setShowModal] = useState(false);
     const {
         data,
         setData,
@@ -33,8 +34,9 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
         create(route("reports.store"), {
             preserveScroll: true,
             onError: () => console.log(errors),
-            onSuccess: () => resetForm(),
-            onFinish: () => reset(),
+            onSuccess: () => {
+                resetForm(), reset();
+            },
         });
         console.log(data);
     };
@@ -52,9 +54,8 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
 
     useEffect(() => {
         if (flash.success) {
-            setShowAlert(true);
+            setShowModal(true);
             setTimeout(() => {
-                setShowAlert(false);
                 flash.success = null;
             }, 2500);
         }
@@ -74,17 +75,40 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        {showAlert && ( // Conditionally render the alert based on showAlert
-                            <div
-                                className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
-                                role="alert"
-                            >
-                                <strong className="font-bold">Success!</strong>
-                                <span className="block sm:inline">
-                                    {flash.success}
-                                </span>
-                            </div>
-                        )}
+                        <Modal show={showModal}>
+                            {/* if success show success alert, if there is something wrong in validation show also */}
+                            {flash.success && (
+                                <div
+                                    className="bg-green-100 border border-green-400 text-green-700 p-4 rounded-xl flex flex-col justify-center items-center text-center gap-2"
+                                    role="alert"
+                                >
+                                    <strong className="font-bold text-lg md:text-2xl">
+                                        Sukses!
+                                    </strong>
+                                    <div className="flex flex-col">
+                                        <p className="text-base md:text-xl">
+                                            {flash.success}
+                                        </p>
+
+                                        <p className="text-sm md:text-lg">
+                                            Periksa progress laporan kamu{" "}
+                                            <Link
+                                                href={route("reports.index")}
+                                                className="underline text-bohim-sky hover:text-bohim-blue cursor-pointer"
+                                            >
+                                                di sini!
+                                            </Link>
+                                        </p>
+                                    </div>
+                                    {/* close modal button here */}
+                                    <SecondaryButton
+                                        onClick={() => setShowModal(false)}
+                                    >
+                                        Tutup
+                                    </SecondaryButton>
+                                </div>
+                            )}
+                        </Modal>
                         <form
                             onSubmit={submit}
                             className="p-6 grid sm:grid-cols-2 sm:gap-8"
@@ -170,7 +194,6 @@ export default function Create({ auth, userId, marineBiotas, violations }) {
                                                 value="Pelanggaran Lainnya"
                                                 className="text-sm font-medium"
                                             />
-                                            {/* add other violation input if user selected other violation in violation type, but this other violation input doesn't have its own database field, so put it in notes field */}
                                             <TextInput
                                                 id="other_violation"
                                                 type="text"

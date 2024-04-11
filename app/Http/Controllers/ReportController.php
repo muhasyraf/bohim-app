@@ -55,12 +55,16 @@ class ReportController extends Controller
                 'marine_biota_id' => 'required|exists:marine_biotas,id',
                 'location' => 'required|string|max:255',
                 'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-                'other_violation' => 'required_if:violation_id,5|string|max:255',
                 'notes' => 'required|string',
             ]
         );
 
         if ($request->violation_id == 5) {
+            $request->validate(
+                [
+                    'other_violation' => 'required|string|max:255',
+                ]
+            );
             $notes = $request->notes . "\n" . "[Pelanggaran Lainnya: " .  $request->other_violation . "]";
         } else {
             $notes = $request->notes;
@@ -83,7 +87,7 @@ class ReportController extends Controller
             ]
         );
 
-        return redirect()->back()->with('success', 'Report created successfully');
+        return redirect()->back()->with('success', 'Laporan berhasil dibuat!');
     }
 
     /**

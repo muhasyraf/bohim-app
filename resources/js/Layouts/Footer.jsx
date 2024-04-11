@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="bg-bohim-snow max-w-screen-2xl mx-auto">
             <div className="container-2xl flex flex-col justify-center items-center md:flex-row md:justify-evenly md:items-start md:mx-6 lg:mx-0">
                 <div className="logo">
-                    <Link className="logo" href="#">
+                    <Link className="logo" href={route("home")}>
                         <img
                             src="/assets/img/logo/logo.png"
                             alt="header-logo"
